@@ -11,8 +11,6 @@
     :root {
       --red: #e93037;
       --dark: #0d0d0d;
-      --dark2: #1a1a1a;
-      --dark3: #222;
       --white: #ffffff;
       --off-white: #f8f8f8;
       --light: #efefef;
@@ -23,33 +21,13 @@
       --shadow-md: 0 6px 24px rgba(31,58,84,0.10);
       --shadow-lg: 0 16px 48px rgba(20,20,43,0.13);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--off-white);
-      color: var(--mid);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
+    body { background: var(--off-white); color: var(--mid); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; line-height: 1.6; }
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
 
     /* ══ NAV ══ */
-    nav {
-      background: white;
-      height: 72px;
-      padding: 0 52px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: var(--shadow-sm);
-      position: sticky;
-      top: 0;
-      z-index: 200;
-    }
+    nav { background: white; height: 72px; padding: 0 52px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 200; }
     .nav-logo { display: flex; align-items: center; gap: 10px; }
     .nav-logo-badge { width: 48px; height: 48px; flex-shrink: 0; }
     .nav-logo-badge img { width: 100%; height: 100%; object-fit: contain; }
@@ -63,313 +41,98 @@
     .nav-order:hover { opacity: 0.9; transform: translateY(-1px); }
 
     /* ══ PAGE HEADER ══ */
-    .page-header {
-      background: var(--dark);
-      padding: 64px 52px;
-      text-align: center;
-    }
-    .page-header-label {
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 14px;
-    }
-    .page-header h1 {
-      font-size: clamp(36px, 5vw, 62px);
-      font-weight: 800;
-      color: white;
-      letter-spacing: -0.5px;
-      line-height: 1.05;
-      margin-bottom: 16px;
-    }
+    .page-header { background: var(--dark); padding: 64px 52px; text-align: center; }
+    .page-header-label { font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+    .page-header h1 { font-size: clamp(36px, 5vw, 62px); font-weight: 800; color: white; letter-spacing: -0.5px; line-height: 1.05; margin-bottom: 16px; }
     .page-header h1 em { font-style: italic; color: var(--yellow); }
-    .page-header p {
-      font-size: 15px;
-      color: rgba(255,255,255,0.5);
-      max-width: 480px;
-      margin: 0 auto 32px;
-      line-height: 1.75;
-    }
+    .page-header p { font-size: 15px; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto 32px; line-height: 1.75; }
     .header-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-    .header-badge {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.7);
-      padding: 7px 16px;
-      border-radius: 50px;
-      font-size: 12.5px;
-      font-weight: 600;
-    }
+    .header-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); padding: 7px 16px; border-radius: 50px; font-size: 12.5px; font-weight: 600; }
 
     /* ══ JUMP NAV ══ */
-    .jump-nav {
-      background: white;
-      border-bottom: 1px solid var(--light);
-      padding: 0 52px;
-      display: flex;
-      gap: 4px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      position: sticky;
-      top: 72px;
-      z-index: 100;
-    }
+    .jump-nav { background: white; border-bottom: 1px solid var(--light); padding: 0 52px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; position: sticky; top: 72px; z-index: 100; }
     .jump-nav::-webkit-scrollbar { display: none; }
-    .jump-link {
-      white-space: nowrap;
-      padding: 14px 18px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--muted);
-      border-bottom: 2.5px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-      cursor: pointer;
-    }
+    .jump-link { white-space: nowrap; padding: 14px 18px; font-size: 13px; font-weight: 700; color: var(--muted); border-bottom: 2.5px solid transparent; transition: color 0.2s, border-color 0.2s; cursor: pointer; }
     .jump-link:hover { color: var(--red); border-bottom-color: var(--red); }
 
     /* ══ MENU WRAPPER ══ */
     .menu-wrap { max-width: 1100px; margin: 0 auto; padding: 0 52px 80px; }
 
     /* ══ SECTION HEADER ══ */
-    .sec-head {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 56px 0 28px;
-    }
-    .sec-badge {
-      background: var(--red);
-      color: white;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .sec-title {
-      font-size: clamp(22px, 2.5vw, 30px);
-      font-weight: 800;
-      color: var(--dark);
-      letter-spacing: -0.3px;
-    }
-    .sec-note {
-      margin-left: auto;
-      font-size: 12.5px;
-      color: var(--muted);
-      font-style: italic;
-    }
-    .sec-divider { border: none; border-top: 2px solid var(--light); margin: 0; }
+    .sec-head { display: flex; align-items: center; gap: 16px; padding: 56px 0 28px; flex-wrap: wrap; }
+    .sec-badge { background: var(--red); color: white; padding: 6px 14px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; white-space: nowrap; }
+    .sec-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--dark); letter-spacing: -0.3px; }
+    .sec-note { margin-left: auto; font-size: 12.5px; color: var(--muted); font-style: italic; }
+    .sec-divider { border: none; border-top: 2px solid var(--light); }
 
-    /* ══ ITEM LIST (for apps, subs, burgers, salads, pastas, desserts) ══ */
-    .item-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 24px;
-    }
-    .item-card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
+    /* ══ ITEM CARD (with optional image) ══ */
+    .item-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
+    .item-card { background: white; border-radius: 14px; overflow: hidden; display: flex; align-items: stretch; box-shadow: var(--shadow-sm); transition: transform 0.25s, box-shadow 0.25s; }
     .item-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .item-card-img { width: 110px; height: 110px; object-fit: cover; flex-shrink: 0; }
+    .item-card-body { flex: 1; padding: 16px 18px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; min-width: 0; }
     .item-info { flex: 1; min-width: 0; }
-    .item-name {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 4px;
-    }
-    .item-desc {
-      font-size: 12.5px;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-    .item-price {
-      background: var(--yellow);
-      color: var(--dark);
-      padding: 5px 13px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-      flex-shrink: 0;
-      align-self: flex-start;
-    }
+    .item-name { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .item-desc { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+    .item-price { background: var(--yellow); color: var(--dark); padding: 5px 13px; border-radius: 50px; font-size: 13px; font-weight: 800; white-space: nowrap; flex-shrink: 0; align-self: flex-start; }
+    .item-price-multi { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; flex-shrink: 0; }
+    .item-price-multi .price-line { font-size: 12px; font-weight: 700; color: var(--dark); background: var(--yellow); padding: 3px 10px; border-radius: 50px; white-space: nowrap; }
 
-    /* multi-price badge for wings etc */
-    .item-price-multi {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      align-items: flex-end;
-      flex-shrink: 0;
-    }
-    .item-price-multi .price-line {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--dark);
-      background: var(--yellow);
-      padding: 3px 10px;
-      border-radius: 50px;
-      white-space: nowrap;
-    }
-
-    /* ══ WINGS CARD (special layout) ══ */
-    .wings-card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px 22px;
-      box-shadow: var(--shadow-sm);
-      margin-top: 24px;
-      grid-column: 1 / -1;
-    }
+    /* ══ WINGS CARD ══ */
+    .wings-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); margin-top: 24px; }
+    .wings-card-img { width: 100%; height: 200px; object-fit: cover; }
+    .wings-card-body { padding: 20px 22px; }
     .wings-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
     .wings-prices { display: flex; gap: 10px; flex-wrap: wrap; }
-    .wings-price {
-      background: var(--yellow);
-      color: var(--dark);
-      padding: 5px 14px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 800;
-    }
-    .wings-sauces {
-      font-size: 12.5px;
-      color: var(--muted);
-      border-top: 1px solid var(--light);
-      padding-top: 12px;
-    }
+    .wings-price { background: var(--yellow); color: var(--dark); padding: 5px 14px; border-radius: 50px; font-size: 13px; font-weight: 800; }
+    .wings-sauces { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--light); padding-top: 12px; }
     .wings-sauces strong { color: var(--dark); font-size: 12px; font-weight: 700; }
 
     /* ══ PIZZA SIZE TABLE ══ */
-    .pizza-section-note {
-      font-size: 13px;
-      color: var(--mid);
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
+    .pizza-section-note { font-size: 13px; color: var(--mid); margin: 18px 0 0; line-height: 1.7; }
     .size-table-wrap { overflow-x: auto; margin-top: 20px; }
-    .size-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
+    .size-table { width: 100%; border-collapse: collapse; background: white; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
     .size-table thead tr { background: var(--dark); }
-    .size-table thead th {
-      padding: 14px 18px;
-      font-size: 12px;
-      font-weight: 700;
-      color: white;
-      text-align: center;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
+    .size-table thead th { padding: 14px 18px; font-size: 12px; font-weight: 700; color: white; text-align: center; letter-spacing: 0.5px; text-transform: uppercase; }
     .size-table thead th:first-child { text-align: left; }
     .size-table tbody tr:nth-child(even) { background: var(--off-white); }
-    .size-table tbody tr { transition: background 0.15s; }
     .size-table tbody tr:hover { background: #fff3f3; }
-    .size-table tbody td {
-      padding: 13px 18px;
-      font-size: 14px;
-      color: var(--dark);
-      text-align: center;
-      border-bottom: 1px solid var(--light);
-    }
+    .size-table tbody td { padding: 13px 18px; font-size: 14px; color: var(--dark); text-align: center; border-bottom: 1px solid var(--light); }
     .size-table tbody td:first-child { text-align: left; font-weight: 700; }
     .size-table tfoot tr { background: #fff7e0; }
-    .size-table tfoot td {
-      padding: 11px 18px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #8a6200;
-      text-align: center;
-      border-top: 2px solid var(--yellow);
-    }
+    .size-table tfoot td { padding: 11px 18px; font-size: 12.5px; font-weight: 700; color: #8a6200; text-align: center; border-top: 2px solid var(--yellow); }
     .size-table tfoot td:first-child { text-align: left; }
 
     /* ══ PIZZA OPTIONS ══ */
     .pizza-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
-    .option-box {
-      background: white;
-      border-radius: 12px;
-      padding: 18px 20px;
-      box-shadow: var(--shadow-sm);
-    }
-    .option-box-title {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 10px;
-    }
+    .option-box { background: white; border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-sm); }
+    .option-box-full { grid-column: 1 / -1; }
+    .option-box-title { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
     .option-box p { font-size: 13px; color: var(--mid); line-height: 1.65; }
 
+    /* ══ CHEESE PIZZA HERO ══ */
+    .cheese-pizza-hero { border-radius: 16px; overflow: hidden; height: 260px; margin-top: 20px; box-shadow: var(--shadow-md); }
+    .cheese-pizza-hero img { width: 100%; height: 100%; object-fit: cover; }
+
     /* ══ SPECIALTY PIZZA GRID ══ */
-    .spec-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 24px;
-    }
-    .spec-card {
-      background: white;
-      border-radius: 14px;
-      padding: 18px 20px;
-      box-shadow: var(--shadow-sm);
-      border-left: 3.5px solid var(--red);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .spec-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    .spec-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border-left: 3.5px solid var(--red); transition: transform 0.25s, box-shadow 0.25s; }
+    .spec-card.has-img { border-left: none; border-top: 3.5px solid var(--red); }
+    .spec-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .spec-card-img { width: 100%; height: 150px; object-fit: cover; display: block; }
+    .spec-card-body { padding: 14px 18px 16px; }
     .spec-name { font-size: 15px; font-weight: 800; color: var(--dark); margin-bottom: 5px; }
     .spec-toppings { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
     /* ══ BEVERAGES ══ */
-    .bev-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 24px;
-    }
-    .bev-card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px 22px;
-      box-shadow: var(--shadow-sm);
-    }
+    .bev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
+    .bev-card { background: white; border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow-sm); }
     .bev-name { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
     .bev-prices { display: flex; gap: 8px; flex-wrap: wrap; }
-    .bev-price {
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--dark);
-      background: var(--yellow);
-      padding: 4px 11px;
-      border-radius: 50px;
-    }
+    .bev-price { font-size: 12.5px; font-weight: 700; color: var(--dark); background: var(--yellow); padding: 4px 11px; border-radius: 50px; }
 
     /* ══ FOOTER ══ */
-    .footer {
-      background: var(--dark);
-      padding: 68px 52px 0;
-      display: grid;
-      grid-template-columns: 1.8fr 1fr 1fr 1fr;
-      gap: 48px;
-    }
+    .footer { background: var(--dark); padding: 68px 52px 0; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 48px; }
     .f-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
     .f-logo-badge { width: 44px; height: 44px; flex-shrink: 0; }
     .f-logo-badge img { width: 100%; height: 100%; object-fit: contain; filter: brightness(0) invert(1); }
@@ -385,7 +148,6 @@
     .f-list a:hover { color: white; }
     .footer-bar { background: var(--dark); padding: 20px 52px; margin-top: 52px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: space-between; font-size: 12.5px; color: rgba(255,255,255,0.32); }
 
-    /* ══ RESPONSIVE ══ */
     @media (max-width: 900px) {
       nav, .menu-wrap, .footer, .footer-bar, .page-header, .jump-nav { padding-left: 24px; padding-right: 24px; }
       .item-grid, .spec-grid, .pizza-options, .bev-grid { grid-template-columns: 1fr; }
@@ -394,6 +156,7 @@
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .footer { grid-template-columns: 1fr; }
+      .item-card-img { width: 88px; height: 88px; }
     }
   </style>
 </head>
@@ -448,10 +211,9 @@
   <a href="#beverages" class="jump-link">Beverages</a>
 </div>
 
-<!-- ══ MENU CONTENT ══ -->
 <div class="menu-wrap">
 
-  <!-- APPETIZERS -->
+  <!-- ══ 01 APPETIZERS ══ -->
   <div id="appetizers">
     <div class="sec-head">
       <span class="sec-badge">01</span>
@@ -459,145 +221,196 @@
     </div>
     <hr class="sec-divider">
 
-    <!-- Chicken Wings (special card) -->
+    <!-- Wings -->
     <div class="wings-card">
-      <div class="wings-header">
-        <div>
-          <div class="item-name">Chicken Wings</div>
-          <div class="item-desc">Bone-in wings tossed in your choice of sauce</div>
+      <img class="wings-card-img" src="brand_assets/menu-pics/appetizers/Chicken Wings.jpg" alt="Chicken Wings">
+      <div class="wings-card-body">
+        <div class="wings-header">
+          <div>
+            <div class="item-name">Chicken Wings</div>
+            <div class="item-desc">Bone-in wings tossed in your choice of sauce</div>
+          </div>
+          <div class="wings-prices">
+            <span class="wings-price">5 pc — $7.49</span>
+            <span class="wings-price">10 pc — $14.99</span>
+            <span class="wings-price">15 pc — $20.99</span>
+            <span class="wings-price">20 pc — $25.99</span>
+          </div>
         </div>
-        <div class="wings-prices">
-          <span class="wings-price">5 pc — $7.49</span>
-          <span class="wings-price">10 pc — $14.99</span>
-          <span class="wings-price">15 pc — $20.99</span>
-          <span class="wings-price">20 pc — $25.99</span>
+        <div class="wings-sauces">
+          <strong>Sauces:</strong> Plain · Hot · Medium · Honey BBQ · Teriyaki · Garlic Parmesan · Lemon Pepper · Cajun
         </div>
-      </div>
-      <div class="wings-sauces">
-        <strong>Sauces:</strong> Plain · Hot · Medium · Honey BBQ · Teriyaki · Garlic Parmesan · Lemon Pepper · Cajun
       </div>
     </div>
 
     <div class="item-grid" style="margin-top:14px;">
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Tender Basket</p>
-          <p class="item-desc">Breaded chicken tenders (5) with french fries</p>
-        </div>
-        <span class="item-price">$9.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Buffalo Boneless Chicken Strips</p>
-          <p class="item-desc">Breaded chicken strips (5) with choice of hot or mild Buffalo sauce. Served with french fries</p>
-        </div>
-        <span class="item-price">$9.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Quesadilla</p>
-          <p class="item-desc">Grilled chicken and mozzarella cheese with salsa and sour cream</p>
-        </div>
-        <span class="item-price">$9.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Tenders</p>
-          <p class="item-desc">Breaded chicken tenders (5) served with honey mustard dressing</p>
-        </div>
-        <span class="item-price">$7.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Sampler Platter</p>
-          <p class="item-desc">Breaded chicken tenders (2), Mozz Sticks (3), and Onion Rings (4)</p>
-        </div>
-        <span class="item-price">$11.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Cheese Breadsticks</p>
-          <p class="item-desc">10 inch cheese breadsticks</p>
-        </div>
-        <span class="item-price">$6.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Regular Breadsticks</p>
-          <p class="item-desc">(8 pieces)</p>
-        </div>
-        <span class="item-price">$5.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Garlic Bread</p>
-          <p class="item-desc">(8 pieces)</p>
-        </div>
-        <span class="item-price">$4.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Garlic Cheesebread</p>
-          <p class="item-desc">(8 pieces)</p>
-        </div>
-        <span class="item-price">$5.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Onion Rings</p>
-          <p class="item-desc">Breaded onion rings (8) served with ketchup</p>
-        </div>
-        <span class="item-price">$6.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Fried Mushrooms</p>
-          <p class="item-desc">Breaded mushrooms (10) served with Ranch dressing</p>
-        </div>
-        <span class="item-price">$6.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Fried Mozzarella Sticks</p>
-          <p class="item-desc">Breaded Mozzarella sticks (6) served with marinara sauce</p>
-        </div>
-        <span class="item-price">$6.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Stuffed Jalapeño Poppers</p>
-          <p class="item-desc">Stuffed cheese jalapeño poppers (6) served with Ranch dressing</p>
-        </div>
-        <span class="item-price">$6.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Breaded Chicken Nuggets</p>
-          <p class="item-desc">Breaded chicken nuggets (10) served with Ranch dressing</p>
-        </div>
-        <span class="item-price">$4.99</span>
-      </div>
-      <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">French Fries</p>
-          <p class="item-desc">Crispy golden fries</p>
-        </div>
-        <div class="item-price-multi">
-          <span class="price-line">Sm — $2.99</span>
-          <span class="price-line">Lg — $3.99</span>
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Chicken Tender Basket.jpg" alt="Chicken Tender Basket">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chicken Tender Basket</p>
+            <p class="item-desc">Breaded chicken tenders (5) with french fries</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Cheesy Bacon Fries</p>
-          <p class="item-desc">Melted nacho cheese and bacon topped on french fries</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Buffalo Boneless Chicken Strips.jpg" alt="Buffalo Boneless Chicken Strips">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Buffalo Boneless Chicken Strips</p>
+            <p class="item-desc">Breaded chicken strips (5) with hot or mild Buffalo sauce and french fries</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$6.49</span>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Chicken Quesadilla.jpg" alt="Chicken Quesadilla">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chicken Quesadilla</p>
+            <p class="item-desc">Grilled chicken and mozzarella cheese with salsa and sour cream</p>
+          </div>
+          <span class="item-price">$9.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Chicken Tenders.jpg" alt="Chicken Tenders">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chicken Tenders</p>
+            <p class="item-desc">Breaded chicken tenders (5) served with honey mustard dressing</p>
+          </div>
+          <span class="item-price">$7.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Sampler Platter.jpg" alt="Sampler Platter">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Sampler Platter</p>
+            <p class="item-desc">Breaded chicken tenders (2), Mozz Sticks (3), and Onion Rings (4)</p>
+          </div>
+          <span class="item-price">$11.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/cheese Breadsticks.jpg" alt="Cheese Breadsticks">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Cheese Breadsticks</p>
+            <p class="item-desc">10 inch cheese breadsticks</p>
+          </div>
+          <span class="item-price">$6.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Regular Breadsticks.jpg" alt="Regular Breadsticks">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Regular Breadsticks</p>
+            <p class="item-desc">8 pieces</p>
+          </div>
+          <span class="item-price">$5.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Garlic Bread.jpg" alt="Garlic Bread">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Garlic Bread</p>
+            <p class="item-desc">8 pieces</p>
+          </div>
+          <span class="item-price">$4.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Garlic Cheese Breadsticks.jpg" alt="Garlic Cheesebread">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Garlic Cheesebread</p>
+            <p class="item-desc">8 pieces</p>
+          </div>
+          <span class="item-price">$5.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Onion Rings.jpg" alt="Onion Rings">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Onion Rings</p>
+            <p class="item-desc">Breaded onion rings (8) served with ketchup</p>
+          </div>
+          <span class="item-price">$6.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Fried Mushrooms.jpg" alt="Fried Mushrooms">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Fried Mushrooms</p>
+            <p class="item-desc">Breaded mushrooms (10) served with Ranch dressing</p>
+          </div>
+          <span class="item-price">$6.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Mozzerella Sticks.jpg" alt="Fried Mozzarella Sticks">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Fried Mozzarella Sticks</p>
+            <p class="item-desc">Breaded Mozzarella sticks (6) served with marinara sauce</p>
+          </div>
+          <span class="item-price">$6.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Jalapeno Poppers.jpg" alt="Stuffed Jalapeño Poppers">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Stuffed Jalapeño Poppers</p>
+            <p class="item-desc">Stuffed cheese jalapeño poppers (6) served with Ranch dressing</p>
+          </div>
+          <span class="item-price">$6.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Chicken Nuggets.jpg" alt="Breaded Chicken Nuggets">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Breaded Chicken Nuggets</p>
+            <p class="item-desc">Breaded chicken nuggets (10) served with Ranch dressing</p>
+          </div>
+          <span class="item-price">$4.99</span>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Fries.jpg" alt="French Fries">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">French Fries</p>
+            <p class="item-desc">Crispy golden fries</p>
+          </div>
+          <div class="item-price-multi">
+            <span class="price-line">Sm — $2.99</span>
+            <span class="price-line">Lg — $3.99</span>
+          </div>
+        </div>
+      </div>
+      <div class="item-card">
+        <img class="item-card-img" src="brand_assets/menu-pics/appetizers/Cheezy Bacon Fries.jpg" alt="Cheesy Bacon Fries">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Cheesy Bacon Fries</p>
+            <p class="item-desc">Melted nacho cheese and bacon topped on french fries (large)</p>
+          </div>
+          <span class="item-price">$6.49</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- BURGERS & PITAS -->
+  <!-- ══ 02 BURGERS & PITAS ══ -->
   <div id="burgers">
     <div class="sec-head">
       <span class="sec-badge">02</span>
@@ -607,79 +420,109 @@
     <hr class="sec-divider">
     <div class="item-grid">
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Classic Cheeseburger</p>
-          <p class="item-desc">1/4 lb beef patty, lettuce, onion, tomato, and American cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Classic Cheeseburger.jpg" alt="Classic Cheeseburger">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Classic Cheeseburger</p>
+            <p class="item-desc">1/4 lb beef patty, lettuce, onion, tomato, and American cheese</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Mushroom Swiss</p>
-          <p class="item-desc">1/4 lb beef patty, Swiss cheese, grilled mushrooms and onion</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Mushroom Swiss Burger.jpg" alt="Mushroom Swiss">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Mushroom Swiss</p>
+            <p class="item-desc">1/4 lb beef patty, Swiss cheese, grilled mushrooms and onion</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Bacon Cheeseburger</p>
-          <p class="item-desc">1/4 lb beef patty, American cheese, bacon, lettuce, onion, tomato</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Bacon Cheese Burger.jpg" alt="Bacon Cheeseburger">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Bacon Cheeseburger</p>
+            <p class="item-desc">1/4 lb beef patty, American cheese, bacon, lettuce, onion, tomato</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Spicy Jalapeño Cheeseburger</p>
-          <p class="item-desc">1/4 lb beef patty, American cheese, jalapeño, lettuce, onion, tomato</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Spicy Jalapeno Cheeseburger.jpg" alt="Spicy Jalapeño Cheeseburger">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Spicy Jalapeño Cheeseburger</p>
+            <p class="item-desc">1/4 lb beef patty, American cheese, jalapeño, lettuce, onion, tomato</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Cajun Chicken Sandwich</p>
-          <p class="item-desc">Grilled Cajun chicken, Swiss cheese, lettuce, tomato, and onion</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Cajun Chicken Sandwich.jpg" alt="Cajun Chicken Sandwich">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Cajun Chicken Sandwich</p>
+            <p class="item-desc">Grilled Cajun chicken, Swiss cheese, lettuce, tomato, and onion</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Buffalo Chicken Sandwich</p>
-          <p class="item-desc">Breaded chicken tossed in Buffalo sauce, Ranch sauce, lettuce and tomato</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Buffalo Chicken Sandwich.jpg" alt="Buffalo Chicken Sandwich">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Buffalo Chicken Sandwich</p>
+            <p class="item-desc">Breaded chicken tossed in Buffalo sauce, Ranch sauce, lettuce and tomato</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Fajita Pita</p>
-          <p class="item-desc">Grilled chicken, tomato, green pepper, and onion with sour cream on the side</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Chicken Fajita Pita.jpg" alt="Chicken Fajita Pita">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chicken Fajita Pita</p>
+            <p class="item-desc">Grilled chicken, tomato, green pepper, and onion with sour cream</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Steak Fajita Pita</p>
-          <p class="item-desc">Grilled steak, tomato, green pepper, and onion with sour cream on the side</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Steak Fajita Pita.jpg" alt="Steak Fajita Pita">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Steak Fajita Pita</p>
+            <p class="item-desc">Grilled steak, tomato, green pepper, and onion with sour cream</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Gyro Pita</p>
-          <p class="item-desc">Grilled gyro slices, lettuce, tomato with tzatziki sauce</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Gyro Pita.jpg" alt="Gyro Pita">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Gyro Pita</p>
+            <p class="item-desc">Grilled gyro slices, lettuce, tomato with tzatziki sauce</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Grilled Chicken Pita</p>
-          <p class="item-desc">Grilled chicken, lettuce, tomato with tzatziki sauce</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/burgers-pitas/Grilled Chicken Pita-2.jpg" alt="Grilled Chicken Pita">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Grilled Chicken Pita</p>
+            <p class="item-desc">Grilled chicken, lettuce, tomato with tzatziki sauce</p>
+          </div>
+          <span class="item-price">$10.99</span>
         </div>
-        <span class="item-price">$10.99</span>
       </div>
     </div>
   </div>
 
-  <!-- SUB SANDWICHES -->
+  <!-- ══ 03 SUB SANDWICHES ══ -->
   <div id="subs">
     <div class="sec-head">
       <span class="sec-badge">03</span>
@@ -689,93 +532,123 @@
     <hr class="sec-divider">
     <div class="item-grid">
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Meatball Sub</p>
-          <p class="item-desc">Meatball with red sauce topped with mozzarella and Parmesan cheeses</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/subs/Meatball Sub.jpg" alt="Meatball Sub">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Meatball Sub</p>
+            <p class="item-desc">Meatball with red sauce topped with mozzarella and Parmesan</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Parmesan</p>
-          <p class="item-desc">Breaded chicken with red sauce topped with mozzarella and Parmesan cheeses</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/subs/Philly Cheeseteak.jpg" alt="Philly Cheesesteak">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Philly Cheesesteak</p>
+            <p class="item-desc">Philly, onion, green pepper, mushroom topped with cheese</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Grilled Veggie</p>
-          <p class="item-desc">Grilled onion, green pepper, black olives, and mushrooms with fresh tomato, lettuce, and mozz cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/subs/Chicken Philly.jpg" alt="Chicken Philly">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chicken Philly</p>
+            <p class="item-desc">Chicken Philly, onion, green pepper, mushroom topped with cheese</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Philly Cheesesteak</p>
-          <p class="item-desc">Philly, onion, green pepper, mushroom topped with cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/subs/Club Sub.jpg" alt="Club Sub">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Club</p>
+            <p class="item-desc">Turkey, ham, lettuce, tomato topped with mozzarella cheese</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Philly</p>
-          <p class="item-desc">Chicken Philly, onion, green pepper, mushroom topped with cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/subs/Chicken Ranch Sub.jpg" alt="Chicken Ranch">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chicken Ranch</p>
+            <p class="item-desc">Grilled chicken, bacon, lettuce, tomato, Ranch sauce topped with cheese</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Club</p>
-          <p class="item-desc">Turkey, ham, lettuce, tomato topped with mozzarella cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/subs/Steak and Cheese Sub.jpg" alt="Steak and Cheese">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Steak and Cheese</p>
+            <p class="item-desc">Steak, cheese, lettuce and tomato</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Classic Chicken</p>
-          <p class="item-desc">Grilled chicken, cheese, lettuce, and tomato with tzatziki</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Chicken Parmesan</p>
+            <p class="item-desc">Breaded chicken with red sauce topped with mozzarella and Parmesan</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Eggplant Parmesan</p>
-          <p class="item-desc">Breaded eggplant, red sauce, light garlic topped with mozzarella cheese</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Grilled Veggie</p>
+            <p class="item-desc">Grilled onion, green pepper, black olives, mushrooms, tomato, lettuce, and mozz cheese</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Ranch</p>
-          <p class="item-desc">Grilled chicken, bacon, lettuce, tomato, Ranch sauce topped with cheese</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Classic Chicken</p>
+            <p class="item-desc">Grilled chicken, cheese, lettuce, and tomato with tzatziki</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Ham or Turkey</p>
-          <p class="item-desc">Ham or Turkey, lettuce and tomato</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Eggplant Parmesan</p>
+            <p class="item-desc">Breaded eggplant, red sauce, light garlic topped with mozzarella cheese</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Steak and Cheese</p>
-          <p class="item-desc">Steak, cheese, lettuce and tomato</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Ham or Turkey</p>
+            <p class="item-desc">Ham or Turkey, lettuce and tomato</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Roast Beef</p>
-          <p class="item-desc">Roast beef, cheese, lettuce and tomato</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Roast Beef</p>
+            <p class="item-desc">Roast beef, cheese, lettuce and tomato</p>
+          </div>
+          <span class="item-price">$9.99</span>
         </div>
-        <span class="item-price">$9.99</span>
       </div>
     </div>
   </div>
 
-  <!-- CHEESE PIZZA -->
+  <!-- ══ 04 CHEESE PIZZA ══ -->
   <div id="cheese-pizza">
     <div class="sec-head">
       <span class="sec-badge">04</span>
@@ -784,11 +657,15 @@
     </div>
     <hr class="sec-divider">
 
+    <div class="cheese-pizza-hero">
+      <img src="brand_assets/menu-pics/pizzas-calzone/Cheese Pizza.jpg" alt="Cheese Pizza">
+    </div>
+
     <div class="size-table-wrap">
       <table class="size-table">
         <thead>
           <tr>
-            <th>Size</th>
+            <th>Pizza</th>
             <th>Small 10"</th>
             <th>Medium 12"</th>
             <th>Large 14"</th>
@@ -808,7 +685,7 @@
         </tbody>
         <tfoot>
           <tr>
-            <td>Additional Toppings</td>
+            <td>Each Additional Topping</td>
             <td>+$0.99</td>
             <td>+$1.49</td>
             <td>+$1.99</td>
@@ -826,20 +703,20 @@
       </div>
       <div class="option-box">
         <p class="option-box-title">Crust Options</p>
-        <p>Thin &amp; Crispy · NY Style · Hand Tossed<br><span style="color:var(--red); font-weight:700;">Gluten-Free +$3.00</span></p>
+        <p>Thin &amp; Crispy · NY Style · Hand Tossed<br><span style="color:var(--red);font-weight:700;">Gluten-Free +$3.00</span></p>
       </div>
       <div class="option-box">
         <p class="option-box-title">Meat Toppings</p>
-        <p>Pepperoni · Italian Sausage · Bacon · Sausage · Beef · Ham · Salami · Anchovies · Chicken · Meatballs · Philly · Gyro<br><span style="color:var(--muted); font-size:11.5px; margin-top:6px; display:block;">Chicken, Philly, Meatball, Anchovies +$0.95</span></p>
+        <p>Pepperoni · Italian Sausage · Bacon · Sausage · Beef · Ham · Salami · Anchovies · Chicken · Meatballs · Philly · Gyro<br><span style="color:var(--muted);font-size:11.5px;display:block;margin-top:4px;">Chicken, Philly, Meatball, Anchovies +$0.95</span></p>
       </div>
-    </div>
-    <div class="option-box" style="margin-top:14px;">
-      <p class="option-box-title">Veggie Toppings</p>
-      <p>Fresh Garlic · Mushroom · Tomato · Red Onion · Green Pepper · Spinach · Broccoli · Zucchini · Eggplant · Black Olive · Green Olive · Banana Pepper · Jalapeños · Pineapple · Sun Dried Tomato · Artichoke · Basil · Oregano</p>
+      <div class="option-box option-box-full">
+        <p class="option-box-title">Veggie Toppings</p>
+        <p>Fresh Garlic · Mushroom · Tomato · Red Onion · Green Pepper · Spinach · Broccoli · Zucchini · Eggplant · Black Olive · Green Olive · Banana Pepper · Jalapeños · Pineapple · Sun Dried Tomato · Artichoke · Basil · Oregano</p>
+      </div>
     </div>
   </div>
 
-  <!-- SPECIALTY PIZZA & CALZONES -->
+  <!-- ══ 05 SPECIALTY PIZZA & CALZONES ══ -->
   <div id="specialty-pizza">
     <div class="sec-head">
       <span class="sec-badge">05</span>
@@ -852,7 +729,7 @@
       <table class="size-table">
         <thead>
           <tr>
-            <th>Size</th>
+            <th>Pizza / Calzone</th>
             <th>Small 10"</th>
             <th>Medium 12"</th>
             <th>Large 14"</th>
@@ -874,205 +751,307 @@
     </div>
 
     <div class="spec-grid">
-      <div class="spec-card">
-        <p class="spec-name">Primo Pizza</p>
-        <p class="spec-toppings">Pepperoni, Italian sausage, salami</p>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Primo Pizza.jpg" alt="Primo Pizza">
+        <div class="spec-card-body">
+          <p class="spec-name">Primo Pizza</p>
+          <p class="spec-toppings">Pepperoni, Italian sausage, salami</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Meat Lover Pizza.jpg" alt="Meat Lovers">
+        <div class="spec-card-body">
+          <p class="spec-name">Meat Lovers</p>
+          <p class="spec-toppings">Pepperoni, sausage, bacon, beef, and ham</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Supreme Pizza.jpg" alt="Supreme">
+        <div class="spec-card-body">
+          <p class="spec-name">Supreme</p>
+          <p class="spec-toppings">Pepperoni, sausage, onion, green pepper, mushroom</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Classic Pizza.jpg" alt="Classic">
+        <div class="spec-card-body">
+          <p class="spec-name">Classic</p>
+          <p class="spec-toppings">Pepperoni, ham, onion, mushroom, green pepper, and black olive</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Veggie Lover Pizza.jpg" alt="Veggie Lover">
+        <div class="spec-card-body">
+          <p class="spec-name">Veggie Lover</p>
+          <p class="spec-toppings">Black olive, onion, green pepper, mushroom, tomato</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Mexican Pizza.jpg" alt="Mexican">
+        <div class="spec-card-body">
+          <p class="spec-name">Mexican</p>
+          <p class="spec-toppings">Beef, jalapeño, tomato, onion, mozzarella, and cheddar cheese</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Hawaiian Pizza.jpg" alt="Hawaiian">
+        <div class="spec-card-body">
+          <p class="spec-name">Hawaiian</p>
+          <p class="spec-toppings">Ham &amp; pineapple</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Margherita Pizza.jpg" alt="Margherita">
+        <div class="spec-card-body">
+          <p class="spec-name">Margherita</p>
+          <p class="spec-toppings">Light garlic, tomato, cheddar and mozzarella cheese</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/BBQ Chicken Pizza.jpg" alt="BBQ Chicken">
+        <div class="spec-card-body">
+          <p class="spec-name">BBQ Chicken</p>
+          <p class="spec-toppings">Grilled chicken, onion, with BBQ sauce</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Grilled Chicken Pizza.jpg" alt="Grilled Chicken">
+        <div class="spec-card-body">
+          <p class="spec-name">Grilled Chicken</p>
+          <p class="spec-toppings">Grilled chicken, tomato, spinach, and onion</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Grilled Chicken Ranch Pizza.jpg" alt="Grilled Chicken Ranch">
+        <div class="spec-card-body">
+          <p class="spec-name">Grilled Chicken Ranch</p>
+          <p class="spec-toppings">Grilled chicken, bacon, onion, tomato, green pepper, with Ranch sauce</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Chicken Alfredo Pizza.jpg" alt="Chicken Alfredo">
+        <div class="spec-card-body">
+          <p class="spec-name">Chicken Alfredo</p>
+          <p class="spec-toppings">Grilled chicken with Alfredo sauce</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Pepperoni Lover Pizza.jpg" alt="Pepperoni Lover">
+        <div class="spec-card-body">
+          <p class="spec-name">Pepperoni Lover</p>
+          <p class="spec-toppings">Loaded triple pepperoni</p>
+        </div>
+      </div>
+      <div class="spec-card has-img">
+        <img class="spec-card-img" src="brand_assets/menu-pics/pizzas-calzone/Calzone.jpg" alt="Calzone">
+        <div class="spec-card-body">
+          <p class="spec-name">Calzone</p>
+          <p class="spec-toppings">Any specialty pizza made into a calzone — same great toppings, folded and baked</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Meat Lovers</p>
-        <p class="spec-toppings">Pepperoni, sausage, bacon, beef, and ham</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Premium Veggie</p>
+          <p class="spec-toppings">Spinach, zucchini, onion, green pepper, garlic, tomato</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Supreme</p>
-        <p class="spec-toppings">Pepperoni, sausage, onion, green pepper, mushroom</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Meatball</p>
+          <p class="spec-toppings">Meatball, onion, tomato</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Classic</p>
-        <p class="spec-toppings">Pepperoni, ham, onion, mushroom, green pepper, and black olive</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Cheeseburger</p>
+          <p class="spec-toppings">Beef, bacon, mozzarella and cheddar cheeses</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Veggie Lover</p>
-        <p class="spec-toppings">Black olive, onion, green pepper, mushroom, tomato</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Greek</p>
+          <p class="spec-toppings">Garlic, feta cheese, black olive, tomato, onion, green pepper, basil, olive oil</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Premium Veggie</p>
-        <p class="spec-toppings">Spinach, zucchini, onion, green pepper, garlic, tomato</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Spinach</p>
+          <p class="spec-toppings">Spinach, onion, tomato, garlic</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Meatball</p>
-        <p class="spec-toppings">Meatball, onion, tomato</p>
+        <div class="spec-card-body">
+          <p class="spec-name">White Pizza</p>
+          <p class="spec-toppings">Garlic Parmesan sauce, beef, onion, green pepper, tomato, basil, oregano</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Cheeseburger</p>
-        <p class="spec-toppings">Beef, bacon, mozzarella and cheddar cheeses</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Buffalo Chicken</p>
+          <p class="spec-toppings">Grilled chicken, hot sauce, ranch, jalapeño, tomato, mozzarella &amp; cheddar cheese</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Greek</p>
-        <p class="spec-toppings">Garlic, feta cheese, black olive, tomato, onion, green pepper, basil, olive oil</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Chicken and Bacon</p>
+          <p class="spec-toppings">Grilled chicken, bacon, tomato, with garlic Parmesan sauce</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Mexican</p>
-        <p class="spec-toppings">Beef, jalapeño, tomato, onion, mozzarella, and cheddar cheese</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Gyro</p>
+          <p class="spec-toppings">Gyro meat, onion, tomato, green pepper, with Ranch sauce</p>
+        </div>
       </div>
       <div class="spec-card">
-        <p class="spec-name">Hawaiian</p>
-        <p class="spec-toppings">Ham &amp; pineapple</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Margherita</p>
-        <p class="spec-toppings">Light garlic, tomato, cheddar and mozzarella cheese</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Spinach</p>
-        <p class="spec-toppings">Spinach, onion, tomato, garlic</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">White Pizza</p>
-        <p class="spec-toppings">Garlic Parmesan sauce, beef, onion, green pepper, tomato, basil, oregano</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">BBQ Chicken</p>
-        <p class="spec-toppings">Grilled chicken, onion, with BBQ sauce</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Buffalo Chicken</p>
-        <p class="spec-toppings">Grilled chicken, hot sauce, ranch sauce, jalapeño, tomato, mozzarella &amp; cheddar cheese</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Grilled Chicken</p>
-        <p class="spec-toppings">Grilled chicken, tomato, spinach, and onion</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Grilled Chicken Ranch</p>
-        <p class="spec-toppings">Grilled chicken, bacon, onion, tomato, green pepper, with Ranch sauce</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Chicken and Bacon</p>
-        <p class="spec-toppings">Grilled chicken, bacon, tomato, with garlic Parmesan sauce</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Chicken Alfredo</p>
-        <p class="spec-toppings">Grilled chicken with Alfredo sauce</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Gyro</p>
-        <p class="spec-toppings">Gyro meat, onion, tomato, green pepper, with Ranch sauce</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Pepperoni Lover</p>
-        <p class="spec-toppings">Loaded triple pepperoni</p>
-      </div>
-      <div class="spec-card">
-        <p class="spec-name">Cheese Lover</p>
-        <p class="spec-toppings">Mozzarella, provolone, Parmesan, and cheddar cheese</p>
+        <div class="spec-card-body">
+          <p class="spec-name">Cheese Lover</p>
+          <p class="spec-toppings">Mozzarella, provolone, Parmesan, and cheddar cheese</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- SALADS -->
+  <!-- ══ 06 SALADS ══ -->
   <div id="salads">
     <div class="sec-head">
       <span class="sec-badge">06</span>
       <h2 class="sec-title">Salads</h2>
     </div>
     <hr class="sec-divider">
-    <p class="pizza-section-note" style="margin-top:18px;"><strong>Dressings:</strong> Ranch · Honey Mustard · Greek · Blue Cheese · Balsamic Vinaigrette · Raspberry Vinaigrette · FF Ranch · Italian · 1000 Island · Caesar · French</p>
+    <p class="pizza-section-note"><strong>Dressings:</strong> Ranch · Honey Mustard · Greek · Blue Cheese · Balsamic Vinaigrette · Raspberry Vinaigrette · FF Ranch · Italian · 1000 Island · Caesar · French</p>
     <div class="item-grid">
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">House Salad</p>
-          <p class="item-desc">Fresh cut Romaine, onion, green pepper, cherry tomatoes, black olives, mozz &amp; cheddar cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/House Salad.jpg" alt="House Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">House Salad</p>
+            <p class="item-desc">Romaine, onion, green pepper, cherry tomatoes, black olives, mozz &amp; cheddar cheese</p>
+          </div>
+          <span class="item-price">$5.49</span>
         </div>
-        <span class="item-price">$5.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Greek Salad</p>
-          <p class="item-desc">Romaine, onion, green pepper, cherry tomatoes, black olives, and feta cheese with Greek dressing</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Greek Salad.jpg" alt="Greek Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Greek Salad</p>
+            <p class="item-desc">Romaine, onion, green pepper, cherry tomatoes, black olives, and feta cheese with Greek dressing</p>
+          </div>
+          <span class="item-price">$7.49</span>
         </div>
-        <span class="item-price">$7.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Classic Caesar Salad</p>
-          <p class="item-desc">Romaine, Parmesan cheese, and croutons with Caesar dressing</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Ceaser Salad.jpg" alt="Classic Caesar Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Classic Caesar Salad</p>
+            <p class="item-desc">Romaine, Parmesan cheese, and croutons with Caesar dressing</p>
+          </div>
+          <span class="item-price">$7.49</span>
         </div>
-        <span class="item-price">$7.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Classic Chicken Caesar Salad</p>
-          <p class="item-desc">Romaine, grilled or crispy chicken, Parmesan cheese, and croutons</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Chicken Ceaser Salad.jpg" alt="Classic Chicken Caesar Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Classic Chicken Caesar</p>
+            <p class="item-desc">Romaine, grilled or crispy chicken, Parmesan cheese, and croutons</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Grilled Chicken Salad</p>
-          <p class="item-desc">Romaine, grilled chicken strips, onion, green pepper, cherry tomatoes, black olives, and mozz cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Grilled Chicken Salad.jpg" alt="Grilled Chicken Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Grilled Chicken Salad</p>
+            <p class="item-desc">Romaine, grilled chicken, onion, green pepper, cherry tomatoes, black olives, and mozz cheese</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Crispy Chicken Salad</p>
-          <p class="item-desc">Romaine, breaded chicken tenders, onion, green pepper, cherry tomatoes, black olives, and mozz cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Crispy Chicken Salad.jpg" alt="Crispy Chicken Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Crispy Chicken Salad</p>
+            <p class="item-desc">Romaine, breaded chicken tenders, onion, green pepper, cherry tomatoes, black olives, and mozz cheese</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Buffalo Chicken Salad</p>
-          <p class="item-desc">Romaine, breaded chicken tenders tossed in buffalo sauce, onion, green pepper, cherry tomatoes, black olives, and mozz cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Buffalo Chicken Salad.jpg" alt="Buffalo Chicken Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Buffalo Chicken Salad</p>
+            <p class="item-desc">Romaine, breaded chicken in buffalo sauce, onion, green pepper, cherry tomatoes, black olives, mozz cheese</p>
+          </div>
+          <span class="item-price">$9.49</span>
         </div>
-        <span class="item-price">$9.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Club Salad</p>
-          <p class="item-desc">Romaine, turkey, roast beef, onion, green pepper, cherry tomatoes, black olives, and mozz cheese</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Club Salad.jpg" alt="Club Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Club Salad</p>
+            <p class="item-desc">Romaine, turkey, roast beef, onion, green pepper, cherry tomatoes, black olives, and mozz cheese</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Teriyaki Chicken Salad</p>
-          <p class="item-desc">Romaine, grilled chicken with teriyaki sauce, cherry tomatoes, pineapple, mozz cheese, onion, and almonds</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Chef Salad.jpg" alt="Chef's Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chef's Salad</p>
+            <p class="item-desc">Romaine, turkey, ham, green pepper, onion, cherry tomatoes, and black olives with mozz cheese</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Fuji Apple Salad</p>
-          <p class="item-desc">Romaine, Fuji apple chips, grilled chicken, cherry tomatoes, onion, pecans, and mozz cheese with raspberry dressing</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/salads/Grilled Shrimp Salad.jpg" alt="Grilled Shrimp Salad">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Grilled Shrimp Salad</p>
+            <p class="item-desc">Romaine, shrimp, onion, cherry tomato, and black olives</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Pecan Salad</p>
-          <p class="item-desc">Romaine, grilled chicken, orange slices, pecans, and feta cheese with raspberry dressing</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Teriyaki Chicken Salad</p>
+            <p class="item-desc">Romaine, grilled chicken with teriyaki sauce, cherry tomatoes, pineapple, mozz cheese, onion, and almonds</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chef's Salad</p>
-          <p class="item-desc">Romaine, turkey, ham, green pepper, onion, cherry tomatoes, and black olives with mozz cheese</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Fuji Apple Salad</p>
+            <p class="item-desc">Romaine, Fuji apple chips, grilled chicken, cherry tomatoes, onion, pecans, and mozz cheese with raspberry dressing</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Grilled Shrimp Salad</p>
-          <p class="item-desc">Romaine, shrimp, onion, cherry tomato, and black olives</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Chicken Pecan Salad</p>
+            <p class="item-desc">Romaine, grilled chicken, orange slices, pecans, and feta cheese with raspberry dressing</p>
+          </div>
+          <span class="item-price">$8.49</span>
         </div>
-        <span class="item-price">$8.49</span>
       </div>
     </div>
   </div>
 
-  <!-- PASTAS -->
+  <!-- ══ 07 PASTAS ══ -->
   <div id="pastas">
     <div class="sec-head">
       <span class="sec-badge">07</span>
@@ -1082,93 +1061,127 @@
     <hr class="sec-divider">
     <div class="item-grid">
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Fettuccine Alfredo</p>
-          <p class="item-desc">With grilled chicken, Cajun chicken, or shrimp</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Fettucine Alfredo.jpg" alt="Fettuccine Alfredo">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Fettuccine Alfredo</p>
+            <p class="item-desc">With grilled chicken, Cajun chicken, or shrimp</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Spaghetti — Red Sauce</p>
-          <p class="item-desc">With meatball or meat sauce</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Spaghetti Red Sauce.jpg" alt="Spaghetti Red Sauce">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Spaghetti — Red Sauce</p>
+            <p class="item-desc">With meatball or meat sauce</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Spaghetti — White Sauce</p>
-          <p class="item-desc">With meatball, grilled chicken, or shrimp</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Spaghetti White Sauce.jpg" alt="Spaghetti White Sauce">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Spaghetti — White Sauce</p>
+            <p class="item-desc">With meatball, grilled chicken, or shrimp</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Cheese or Meat Ravioli</p>
-          <p class="item-desc">Red or white sauce</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Ravioli.jpg" alt="Ravioli">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Cheese or Meat Ravioli</p>
+            <p class="item-desc">Red or white sauce</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Meat Lasagna</p>
-          <p class="item-desc">Classic baked meat lasagna</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Meat Lasagna.jpg" alt="Meat Lasagna">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Meat Lasagna</p>
+            <p class="item-desc">Classic baked meat lasagna</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Baked Ziti</p>
-          <p class="item-desc">Red or meat sauce</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Eggplant Parmesan Pasta.jpg" alt="Eggplant Parmesan">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Eggplant Parmesan</p>
+            <p class="item-desc">Breaded eggplant with red sauce and Parmesan</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Eggplant Parmesan</p>
-          <p class="item-desc">Breaded eggplant with red sauce and Parmesan</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Chicken Parmesan Pasta.jpg" alt="Chicken Parmesan">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chicken Parmesan</p>
+            <p class="item-desc">Breaded chicken breast with red sauce and Parmesan</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chicken Parmesan</p>
-          <p class="item-desc">Breaded chicken breast with red sauce and Parmesan</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Cheese Tortellini.jpg" alt="Cheese Tortellini">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Cheese Tortellini</p>
+            <p class="item-desc">Red or white sauce</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Cheese Tortellini</p>
-          <p class="item-desc">Red or white sauce</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Seafood Fettucine.jpg" alt="Seafood Fettuccine">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Seafood Fettuccine</p>
+            <p class="item-desc">Shrimp, crabmeat, tomato, green pepper with Alfredo sauce</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Seafood Fettuccine</p>
-          <p class="item-desc">Shrimp, crabmeat, tomato, green pepper with Alfredo sauce</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/pastas/Classic Chicken Pasta.jpg" alt="Classic Chicken Pasta">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Classic Chicken</p>
+            <p class="item-desc">Ziti pasta with grilled chicken, tomato, spinach with Alfredo and light red sauce</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Veggie Primo</p>
-          <p class="item-desc">Ziti pasta with grilled green pepper, onion, black olives, and tomatoes in red sauce</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Baked Ziti</p>
+            <p class="item-desc">Red or meat sauce</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Classic Chicken</p>
-          <p class="item-desc">Ziti pasta with grilled chicken, tomato, spinach with Alfredo sauce and light red sauce</p>
+        <div class="item-card-body" style="padding-left:18px;">
+          <div class="item-info">
+            <p class="item-name">Veggie Primo</p>
+            <p class="item-desc">Ziti pasta with grilled green pepper, onion, black olives, and tomatoes in red sauce</p>
+          </div>
+          <span class="item-price">$13.99</span>
         </div>
-        <span class="item-price">$13.99</span>
       </div>
     </div>
   </div>
 
-  <!-- DESSERTS -->
+  <!-- ══ 08 DESSERTS ══ -->
   <div id="desserts">
     <div class="sec-head">
       <span class="sec-badge">08</span>
@@ -1177,41 +1190,50 @@
     <hr class="sec-divider">
     <div class="item-grid">
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">NY Style Cheesecake</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/desserts/Cheesecake.jpg" alt="NY Style Cheesecake">
+        <div class="item-card-body">
+          <div class="item-info"><p class="item-name">NY Style Cheesecake</p></div>
+          <span class="item-price">$3.99</span>
         </div>
-        <span class="item-price">$3.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Cannoli</p>
-          <p class="item-desc">2 pieces</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/desserts/Cannoli.jpg" alt="Cannoli">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Cannoli</p>
+            <p class="item-desc">2 pieces</p>
+          </div>
+          <span class="item-price">$4.99</span>
         </div>
-        <span class="item-price">$4.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chocolate Cake</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/desserts/Chocolate Cake.jpg" alt="Chocolate Cake">
+        <div class="item-card-body">
+          <div class="item-info"><p class="item-name">Chocolate Cake</p></div>
+          <span class="item-price">$4.99</span>
         </div>
-        <span class="item-price">$4.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Tiramisu</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/desserts/Tiramisu.jpg" alt="Tiramisu">
+        <div class="item-card-body">
+          <div class="item-info"><p class="item-name">Tiramisu</p></div>
+          <span class="item-price">$4.99</span>
         </div>
-        <span class="item-price">$4.99</span>
       </div>
       <div class="item-card">
-        <div class="item-info">
-          <p class="item-name">Chocolate Chip Cookie</p>
-          <p class="item-desc">7 inch</p>
+        <img class="item-card-img" src="brand_assets/menu-pics/desserts/Chocolate Chip Cookie.jpg" alt="Chocolate Chip Cookie">
+        <div class="item-card-body">
+          <div class="item-info">
+            <p class="item-name">Chocolate Chip Cookie</p>
+            <p class="item-desc">7 inch</p>
+          </div>
+          <span class="item-price">$5.99</span>
         </div>
-        <span class="item-price">$5.99</span>
       </div>
     </div>
   </div>
 
-  <!-- BEVERAGES -->
+  <!-- ══ 09 BEVERAGES ══ -->
   <div id="beverages">
     <div class="sec-head">
       <span class="sec-badge">09</span>
