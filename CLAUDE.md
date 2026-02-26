@@ -1,7 +1,7 @@
-# CLAUDE.md — Bob's Pizza Website
+# CLAUDE.md — Till Five Pizza Website
 
 ## Project Overview
-- **Client:** Bob's Pizza — a late-night pizza restaurant
+- **Client:** Till Five Pizza — a late-night pizza restaurant
 - **Tagline:** "Open Late. Eat Great."
 - **Deployed on:** Vercel (static hosting)
 - **Current stack:** Plain HTML files with inline CSS + vanilla JS
@@ -64,7 +64,7 @@
 - If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
 
 ## Anti-Generic Guardrails
-- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Use the Bob's brand colors above.
+- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Use the Till Five brand colors above.
 - **Shadows:** Never use flat `shadow-md`. Use the layered, color-tinted shadows defined above.
 - **Typography:** Never use the same font for headings and body. Pair a display/serif with a clean sans. Apply tight tracking (`-0.03em`) on large headings, generous line-height (`1.7`) on body.
 - **Gradients:** Layer multiple radial gradients. Add grain/texture via SVG noise filter for depth.
