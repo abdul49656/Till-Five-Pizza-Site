@@ -38,32 +38,6 @@
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
 
-    /* ══════════════════════════════════════
-       TOP BAR
-    ══════════════════════════════════════ */
-    .topbar {
-      background: var(--neutral--800);
-      color: white;
-      padding: 8px 52px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 12.5px;
-      font-weight: 600;
-    }
-    .topbar-left { display: flex; align-items: center; gap: 22px; }
-    .topbar-left a, .topbar-left span { color: white; }
-    .topbar-right { display: flex; align-items: center; gap: 8px; }
-    .topbar-right > span { color: rgba(255,255,255,0.55); font-size: 11.5px; margin-right: 4px; }
-    .tb-badge {
-      background: var(--accent--primary-1);
-      color: white;
-      padding: 3px 10px;
-      border-radius: 5px;
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
 
     /* ══════════════════════════════════════
        NAV
@@ -86,16 +60,11 @@
       gap: 10px;
     }
     .nav-logo-badge {
-      width: 40px;
-      height: 40px;
-      background: var(--neutral--800);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 48px;
+      height: 48px;
       flex-shrink: 0;
     }
-    .nav-logo-badge svg { width: 28px; height: 28px; }
+    .nav-logo-badge img { width: 100%; height: 100%; object-fit: contain; }
     .nav-logo-text {
       font-size: 18px;
       font-weight: 800;
@@ -591,16 +560,11 @@
       margin-bottom: 14px;
     }
     .f-logo-badge {
-      width: 36px;
-      height: 36px;
-      background: var(--accent--primary-1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 44px;
+      height: 44px;
       flex-shrink: 0;
     }
-    .f-logo-badge svg { width: 24px; height: 24px; }
+    .f-logo-badge img { width: 100%; height: 100%; object-fit: contain; filter: brightness(0) invert(1); }
     .f-logo-text {
       font-size: 18px;
       font-weight: 800;
@@ -672,29 +636,12 @@
 </head>
 <body>
 
-<!-- ══ TOP BAR ══ -->
-<div class="topbar">
-  <div class="topbar-left">
-    <span>⭐ Pizzas · Wings · Burgers · Pastas · Subs</span>
-  </div>
-  <div class="topbar-right">
-    <span>Order on:</span>
-    <span class="tb-badge">DoorDash</span>
-    <span class="tb-badge">Uber Eats</span>
-    <span class="tb-badge">Grubhub</span>
-  </div>
-</div>
 
 <!-- ══ NAV ══ -->
 <nav>
   <a href="#" class="nav-logo">
     <div class="nav-logo-badge">
-      <!-- TFP star badge icon -->
-      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="13" stroke="white" stroke-width="1.5"/>
-        <circle cx="14" cy="14" r="10" stroke="white" stroke-width="1"/>
-        <text x="14" y="17" text-anchor="middle" fill="white" font-size="7" font-weight="800" font-family="sans-serif">TFP</text>
-      </svg>
+      <img src="brand_assets/TFP Logo.png" alt="Till Five Pizza Logo">
     </div>
     <div>
       <div class="nav-logo-text">Till Five <span>Pizza</span></div>
@@ -703,7 +650,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#menu">Menu</a></li>
+    <li><a href="menu.html">Menu</a></li>
     <li><a href="#locations">Locations</a></li>
     <li><a href="#catering">Catering</a></li>
   </ul>
@@ -893,7 +840,7 @@
   </div>
 
   <div class="menu-cta reveal">
-    <a href="#" class="btn-red-outline">View Full Menu &amp; Order</a>
+    <a href="menu.html" class="btn-red-outline">View Full Menu &amp; Order</a>
   </div>
 </section>
 
@@ -919,43 +866,43 @@
 <section class="locations" id="locations">
   <div class="locs-head">
     <p class="sec-label reveal">Find Us</p>
-    <h2 class="sec-h2 reveal d1">Our Locations</h2>
-    <p class="sec-sub reveal d2" style="margin-bottom: 0;">Come in, sit down, or order ahead — we're here for you.</p>
+    <h2 class="sec-h2 reveal d1">Three Nashville Locations</h2>
+    <p class="sec-sub reveal d2" style="margin-bottom: 0;">Murfreesboro Pike · 7th Ave Downtown · Music Valley</p>
   </div>
 
   <div class="locs-grid">
     <div class="loc-card reveal">
       <span class="loc-num">Location 01</span>
-      <h3 class="loc-name">Downtown</h3>
-      <p class="loc-addr">123 Main Street<br>Suite 100</p>
-      <p class="loc-phone"><a href="tel:5555550101">(555) 555-0101</a></p>
+      <h3 class="loc-name">Murfreesboro Pike</h3>
+      <p class="loc-addr">825 Murfreesboro Pike<br>Nashville, TN 37217</p>
+      <p class="loc-phone"><a href="tel:6156063333">(615) 606-3333</a></p>
       <div class="loc-hours">
         <p class="loc-hours-label">Open Daily</p>
-        <p class="loc-hours-time">11 AM — 5 AM</p>
+        <p class="loc-hours-time">10 AM — 5 AM</p>
         <span class="loc-open-badge"><span class="loc-open-dot"></span> Open Now</span>
       </div>
     </div>
 
     <div class="loc-card reveal d1">
       <span class="loc-num">Location 02</span>
-      <h3 class="loc-name">Midtown</h3>
-      <p class="loc-addr">456 Center Ave<br>Ground Floor</p>
-      <p class="loc-phone"><a href="tel:5555550102">(555) 555-0102</a></p>
+      <h3 class="loc-name">7th Ave — Downtown</h3>
+      <p class="loc-addr">231 7th Ave N<br>Nashville, TN 37219</p>
+      <p class="loc-phone"><a href="tel:6159560000">(615) 956-0000</a></p>
       <div class="loc-hours">
         <p class="loc-hours-label">Open Daily</p>
-        <p class="loc-hours-time">11 AM — 5 AM</p>
+        <p class="loc-hours-time">10 AM — 5 AM</p>
         <span class="loc-open-badge"><span class="loc-open-dot"></span> Open Now</span>
       </div>
     </div>
 
     <div class="loc-card reveal d2">
       <span class="loc-num">Location 03</span>
-      <h3 class="loc-name">Uptown</h3>
-      <p class="loc-addr">789 North Blvd<br>Corner Unit</p>
-      <p class="loc-phone"><a href="tel:5555550103">(555) 555-0103</a></p>
+      <h3 class="loc-name">Music Valley</h3>
+      <p class="loc-addr">2450 Music Valley Dr<br>Nashville, TN 37214</p>
+      <p class="loc-phone"><a href="tel:6157273333">(615) 727-3333</a></p>
       <div class="loc-hours">
         <p class="loc-hours-label">Open Daily</p>
-        <p class="loc-hours-time">11 AM — 5 AM</p>
+        <p class="loc-hours-time">3 PM — 5 AM</p>
         <span class="loc-open-badge"><span class="loc-open-dot"></span> Open Now</span>
       </div>
     </div>
@@ -967,11 +914,7 @@
   <div>
     <div class="f-logo">
       <div class="f-logo-badge">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="11" stroke="white" stroke-width="1.5"/>
-          <circle cx="12" cy="12" r="8" stroke="white" stroke-width="1"/>
-          <text x="12" y="15.5" text-anchor="middle" fill="white" font-size="5.5" font-weight="800" font-family="sans-serif">TFP</text>
-        </svg>
+        <img src="brand_assets/TFP Logo.png" alt="Till Five Pizza Logo">
       </div>
       <div class="f-logo-text">Till Five <span>Pizza</span></div>
     </div>
