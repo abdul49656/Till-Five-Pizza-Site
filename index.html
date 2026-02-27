@@ -1,970 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Till Five Pizza — Open Late. Eat Great.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --accent--primary-1: #e93037;
-      --neutral--600: #5b5b5b;
-      --neutral--800: #0d0d0d;
-      --neutral--100: #ffffff;
-      --neutral--300: #efefef;
-      --neutral--200: #f8f8f8;
-      --neutral--700: #313131;
-      --neutral--500: #9c9c9c;
-      --neutral--400: #c4c4c4;
-      --secondary--color-1: #ffbc11;
-      --shadow-01: 0 2px 12px rgba(31,58,84,0.07);
-      --shadow-02: 0 6px 24px rgba(31,58,84,0.10);
-      --shadow-03: 0 16px 48px rgba(20,20,43,0.13);
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Daugherty & Honey — Make It Golden. Vote Abigail Daugherty & Dia Honey Abdullah for Belmont University SGA President & Vice President 2025." />
+  <title>Daugherty & Honey — Make It Golden | Belmont University SGA 2025</title>
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Figtree:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
 
-    body {
-      background-color: var(--neutral--100);
-      color: var(--neutral--600);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.667em;
-    }
-
-    img { display: block; max-width: 100%; }
-    a { text-decoration: none; color: inherit; }
-
-
-    /* ══════════════════════════════════════
-       NAV
-    ══════════════════════════════════════ */
-    nav {
-      background: white;
-      height: 72px;
-      padding: 0 52px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: var(--shadow-01);
-      position: sticky;
-      top: 0;
-      z-index: 200;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .nav-logo-badge {
-      width: 48px;
-      height: 48px;
-      flex-shrink: 0;
-    }
-    .nav-logo-badge img { width: 100%; height: 100%; object-fit: contain; }
-    .nav-logo-text {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--neutral--800);
-      letter-spacing: -0.4px;
-      line-height: 1;
-    }
-    .nav-logo-text span { color: var(--accent--primary-1); }
-    .nav-logo-sub {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--neutral--500);
-      margin-top: 2px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 14.5px;
-      font-weight: 600;
-      color: var(--neutral--700);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent--primary-1); }
-    .nav-order {
-      background: var(--accent--primary-1);
-      color: white;
-      padding: 11px 26px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: opacity 0.2s, transform 0.15s;
-    }
-    .nav-order:hover { opacity: 0.9; transform: translateY(-1px); }
-
-    /* ══════════════════════════════════════
-       HERO
-    ══════════════════════════════════════ */
-    .hero {
-      background: var(--accent--primary-1);
-      padding: 64px 52px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      min-height: 580px;
-      overflow: hidden;
-    }
-    .hero-text { padding-bottom: 64px; }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.14);
-      border-radius: 50px;
-      padding: 6px 16px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 28px;
-    }
-    .hero-pill-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--secondary--color-1);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .hero-h1 {
-      font-size: clamp(34px, 3.8vw, 52px);
-      font-weight: 800;
-      line-height: 1.1;
-      color: white;
-      letter-spacing: -0.5px;
-      margin-bottom: 20px;
-    }
-    .hero-sub {
-      font-size: 15px;
-      color: rgba(255,255,255,0.78);
-      line-height: 1.75;
-      margin-bottom: 40px;
-      max-width: 400px;
-    }
-    .hero-btns {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      margin-bottom: 44px;
-    }
-    .btn-white {
-      display: inline-block;
-      background: white;
-      color: var(--accent--primary-1);
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(255,255,255,0.22);
-    }
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,255,255,0.28); }
-    .btn-ghost-white {
-      display: inline-block;
-      border: 2px solid rgba(255,255,255,0.5);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: background 0.2s;
-    }
-    .btn-ghost-white:hover { background: rgba(255,255,255,0.12); }
-
-    .hero-chips { display: flex; gap: 10px; flex-wrap: wrap; }
-    .hero-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.11);
-      border: 1.5px solid rgba(255,255,255,0.2);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .hero-chip:hover { background: rgba(255,255,255,0.2); }
-
-    .hero-img-col {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
-    .hero-pizza-circle {
-      width: min(460px, 42vw);
-      height: min(460px, 42vw);
-      border-radius: 50%;
-      overflow: hidden;
-      border: 8px solid rgba(255,255,255,0.18);
-      box-shadow: 0 40px 120px rgba(0,0,0,0.28);
-      flex-shrink: 0;
-    }
-    .hero-pizza-circle img { width: 100%; height: 100%; object-fit: cover; }
-
-    /* ══════════════════════════════════════
-       CATEGORIES
-    ══════════════════════════════════════ */
-    .categories {
-      padding: 72px 52px;
-      background: white;
-      text-align: center;
-    }
-    .sec-label {
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent--primary-1);
-      margin-bottom: 12px;
-    }
-    .sec-h2 {
-      font-size: clamp(28px, 3vw, 38px);
-      font-weight: 800;
-      color: var(--neutral--800);
-      letter-spacing: -0.3px;
-      margin-bottom: 12px;
-    }
-    .sec-sub {
-      font-size: 15px;
-      color: var(--neutral--600);
-      max-width: 460px;
-      margin: 0 auto 52px;
-      line-height: 1.7;
-    }
-    .cat-row { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .cat-item { cursor: pointer; text-align: center; }
-    .cat-circle {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid var(--neutral--300);
-      margin: 0 auto 14px;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    }
-    .cat-circle img { width: 100%; height: 100%; object-fit: cover; }
-    .cat-item:hover .cat-circle {
-      border-color: var(--accent--primary-1);
-      transform: scale(1.06);
-      box-shadow: 0 12px 40px rgba(233,48,55,0.18);
-    }
-    .cat-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--neutral--800);
-    }
-    .cats-cta { margin-top: 44px; }
-
-    /* ══════════════════════════════════════
-       ABOUT
-    ══════════════════════════════════════ */
-    .about {
-      background: var(--neutral--800);
-      padding: 84px 52px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-    .about-h2 {
-      font-size: clamp(28px, 3.2vw, 44px);
-      font-weight: 800;
-      color: white;
-      line-height: 1.12;
-      letter-spacing: -0.4px;
-      margin-bottom: 20px;
-    }
-    .about-h2 em { font-style: italic; color: var(--secondary--color-1); }
-    .about-p {
-      font-size: 14.5px;
-      color: rgba(255,255,255,0.52);
-      line-height: 1.85;
-      margin-bottom: 36px;
-    }
-    .about-stats {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      margin-bottom: 36px;
-    }
-    .stat-n {
-      font-size: 34px;
-      font-weight: 800;
-      color: var(--secondary--color-1);
-      line-height: 1;
-    }
-    .stat-l {
-      font-size: 10.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: rgba(255,255,255,0.38);
-      margin-top: 5px;
-    }
-    .stat-sep { width: 1px; height: 44px; background: rgba(255,255,255,0.1); }
-    .btn-red {
-      display: inline-block;
-      background: var(--accent--primary-1);
-      color: white;
-      padding: 14px 30px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: opacity 0.2s, transform 0.15s;
-    }
-    .btn-red:hover { opacity: 0.9; transform: translateY(-1px); }
-    .about-photo {
-      border-radius: 20px;
-      overflow: hidden;
-      aspect-ratio: 5/4;
-      box-shadow: var(--shadow-03);
-    }
-    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
-
-    /* ══════════════════════════════════════
-       MENU SECTION
-    ══════════════════════════════════════ */
-    .menu-section {
-      padding: 84px 52px;
-      background: var(--neutral--200);
-    }
-    .menu-head { text-align: center; margin-bottom: 56px; }
-
-    .pizza-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 44px;
-    }
-    .p-card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px 22px 24px;
-      text-align: center;
-      box-shadow: var(--shadow-01);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .p-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-03); }
-    .p-card-img {
-      width: 148px;
-      height: 148px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 18px;
-      border: 3px solid var(--neutral--300);
-      transition: border-color 0.3s;
-    }
-    .p-card:hover .p-card-img { border-color: var(--accent--primary-1); }
-    .p-card-img img { width: 100%; height: 100%; object-fit: cover; }
-    .p-card-name {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--neutral--800);
-      margin-bottom: 6px;
-    }
-    .p-card-desc {
-      font-size: 12.5px;
-      color: var(--neutral--500);
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-    .price-badge {
-      display: inline-block;
-      background: var(--secondary--color-1);
-      color: var(--neutral--800);
-      padding: 5px 16px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 800;
-    }
-    .menu-cta { text-align: center; }
-    .btn-red-outline {
-      display: inline-block;
-      border: 2px solid var(--accent--primary-1);
-      color: var(--accent--primary-1);
-      padding: 13px 32px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-red-outline:hover { background: var(--accent--primary-1); color: white; }
-
-    /* Other menu items row */
-    .menu-others {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-bottom: 44px;
-    }
-    .mo-card {
-      background: white;
-      border-radius: 14px;
-      padding: 22px 18px;
-      text-align: center;
-      box-shadow: var(--shadow-01);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .mo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-02); }
-    .mo-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
-    .mo-name {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--neutral--800);
-      margin-bottom: 4px;
-    }
-    .mo-sub { font-size: 12px; color: var(--neutral--500); }
-
-    /* ══════════════════════════════════════
-       CTA BANNER
-    ══════════════════════════════════════ */
-    .cta-banner {
-      background: var(--accent--primary-1);
-      padding: 84px 52px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-      overflow: hidden;
-    }
-    .cta-h2 {
-      font-size: clamp(28px, 3.5vw, 48px);
-      font-weight: 800;
-      color: white;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      margin-bottom: 32px;
-    }
-    .cta-h2 strong { color: var(--secondary--color-1); font-weight: 800; }
-    .cta-sub {
-      font-size: 15px;
-      color: rgba(255,255,255,0.72);
-      margin-bottom: 36px;
-      line-height: 1.7;
-    }
-    .cta-photo {
-      border-radius: 20px;
-      overflow: hidden;
-      aspect-ratio: 5/4;
-      box-shadow: 0 32px 80px rgba(0,0,0,0.26);
-    }
-    .cta-photo img { width: 100%; height: 100%; object-fit: cover; }
-
-    /* ══════════════════════════════════════
-       LOCATIONS
-    ══════════════════════════════════════ */
-    .locations {
-      padding: 84px 52px;
-      background: white;
-    }
-    .locs-head { text-align: center; margin-bottom: 52px; }
-    .locs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .loc-card {
-      background: var(--neutral--200);
-      border-radius: 16px;
-      padding: 32px;
-      transition: box-shadow 0.3s, transform 0.3s;
-    }
-    .loc-card:hover { box-shadow: var(--shadow-02); transform: translateY(-3px); }
-    .loc-num {
-      display: inline-block;
-      background: var(--accent--primary-1);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 50px;
-      font-size: 11.5px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-    .loc-name {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--neutral--800);
-      margin-bottom: 14px;
-      letter-spacing: -0.2px;
-    }
-    .loc-addr {
-      font-size: 14px;
-      color: var(--neutral--600);
-      line-height: 1.8;
-      margin-bottom: 6px;
-    }
-    .loc-phone { font-size: 14px; font-weight: 600; color: var(--neutral--700); }
-    .loc-phone a { color: var(--neutral--700); }
-    .loc-hours {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 2px solid var(--neutral--300);
-    }
-    .loc-hours-label {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--neutral--500);
-      margin-bottom: 6px;
-    }
-    .loc-hours-time {
-      font-size: 19px;
-      font-weight: 800;
-      color: var(--neutral--800);
-      margin-bottom: 10px;
-    }
-    .loc-open-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: var(--secondary--color-1);
-      color: var(--neutral--800);
-      padding: 6px 13px;
-      border-radius: 8px;
-      font-size: 12.5px;
-      font-weight: 700;
-    }
-    .loc-open-dot { width: 7px; height: 7px; background: var(--accent--primary-1); border-radius: 50%; }
-
-    /* ══════════════════════════════════════
-       FOOTER
-    ══════════════════════════════════════ */
-    .footer {
-      background: var(--neutral--800);
-      padding: 68px 52px 0;
-      display: grid;
-      grid-template-columns: 1.8fr 1fr 1fr 1fr;
-      gap: 48px;
-    }
-    .f-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    .f-logo-badge {
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
-    }
-    .f-logo-badge img { width: 100%; height: 100%; object-fit: contain; filter: brightness(0) invert(1); }
-    .f-logo-text {
-      font-size: 18px;
-      font-weight: 800;
-      color: white;
-      letter-spacing: -0.3px;
-    }
-    .f-logo-text span { color: var(--accent--primary-1); }
-    .f-desc {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.42);
-      line-height: 1.75;
-      margin-bottom: 28px;
-      max-width: 250px;
-    }
-    .f-socials { display: flex; gap: 8px; }
-    .f-soc {
-      width: 38px; height: 38px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.08);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.55);
-      transition: background 0.2s, color 0.2s;
-    }
-    .f-soc:hover { background: var(--accent--primary-1); color: white; }
-    .f-col-title {
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: white;
-      margin-bottom: 24px;
-    }
-    .f-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .f-list a {
-      font-size: 14px;
-      color: rgba(255,255,255,0.42);
-      transition: color 0.2s;
-    }
-    .f-list a:hover { color: white; }
-    .footer-bar {
-      background: var(--neutral--800);
-      padding: 20px 52px;
-      margin-top: 52px;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.32);
-    }
-
-    /* ══════════════════════════════════════
-       SCROLL REVEAL
-    ══════════════════════════════════════ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-    .d1 { transition-delay: 0.1s; }
-    .d2 { transition-delay: 0.2s; }
-    .d3 { transition-delay: 0.3s; }
-    .d4 { transition-delay: 0.4s; }
-    .d5 { transition-delay: 0.5s; }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- ═══ FLOATING PETALS ═══ -->
+  <div id="petals-container" aria-hidden="true"></div>
 
-<!-- ══ NAV ══ -->
-<nav>
-  <a href="#" class="nav-logo">
-    <div class="nav-logo-badge">
-      <img src="brand_assets/TFP Logo.png" alt="Till Five Pizza Logo">
-    </div>
-    <div>
-      <div class="nav-logo-text">Till Five <span>Pizza</span></div>
-      <div class="nav-logo-sub">Open Late · Eat Great</div>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="#locations">Locations</a></li>
-    <li><a href="#catering">Catering</a></li>
-  </ul>
-  <a href="#" class="nav-order">Order Online</a>
-</nav>
+  <!-- ═══════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Daugherty and Honey — Home">
+      <span class="logo-text">D&amp;H</span>
+      <span class="logo-accent">✦</span>
+    </a>
 
-<!-- ══ HERO ══ -->
-<section class="hero">
-  <div class="hero-text">
-    <div class="hero-pill">
-      <span class="hero-pill-dot"></span>
-      Late Night Done Right
-    </div>
-    <h1 class="hero-h1">Till Five<br>Pizza's menu</h1>
-    <p class="hero-sub">Crispy wings, loaded subs, handmade pastas, smashed burgers, and fresh-tossed pizzas — crafted daily and served till the early hours.</p>
-    <div class="hero-btns">
-      <a href="#" class="btn-white">Order Online</a>
-      <a href="#locations" class="btn-ghost-white">Find a Location</a>
-    </div>
-    <div class="hero-chips">
-      <div class="hero-chip">🍕 Pizzas</div>
-      <div class="hero-chip">🍗 Wings</div>
-      <div class="hero-chip">🍔 Burgers</div>
-      <div class="hero-chip">🥖 Subs</div>
-    </div>
-  </div>
-  <div class="hero-img-col">
-    <div class="hero-pizza-circle">
-      <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=600&fit=crop&q=80" alt="Till Five Pizza Signature Pie">
-    </div>
-  </div>
-</section>
-
-<!-- ══ CATEGORIES ══ -->
-<section class="categories" id="menu">
-  <p class="sec-label reveal">Explore</p>
-  <h2 class="sec-h2 reveal d1">Till Five Pizza's Menu</h2>
-  <p class="sec-sub reveal d2">Fresh-made pizza, crispy wings, smashed burgers, house-made pastas, and loaded subs — all crafted with premium ingredients, every single day.</p>
-  <div class="cat-row">
-    <div class="cat-item reveal d1">
-      <div class="cat-circle">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&h=300&fit=crop&q=80" alt="Pizzas">
-      </div>
-      <p class="cat-name">Pizzas</p>
-    </div>
-    <div class="cat-item reveal d2">
-      <div class="cat-circle">
-        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=300&h=300&fit=crop&q=80" alt="Wings">
-      </div>
-      <p class="cat-name">Wings</p>
-    </div>
-    <div class="cat-item reveal d3">
-      <div class="cat-circle">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop&q=80" alt="Burgers">
-      </div>
-      <p class="cat-name">Burgers</p>
-    </div>
-    <div class="cat-item reveal d4">
-      <div class="cat-circle">
-        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=300&h=300&fit=crop&q=80" alt="Pastas">
-      </div>
-      <p class="cat-name">Pastas</p>
-    </div>
-    <div class="cat-item reveal d5">
-      <div class="cat-circle">
-        <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=300&h=300&fit=crop&q=80" alt="Subs">
-      </div>
-      <p class="cat-name">Subs</p>
-    </div>
-  </div>
-  <div class="cats-cta reveal d3">
-    <a href="#" class="btn-red">Order Now</a>
-  </div>
-</section>
-
-<!-- ══ ABOUT ══ -->
-<section class="about" id="about">
-  <div class="reveal">
-    <p class="sec-label" style="color: var(--accent--primary-1);">Our Story</p>
-    <h2 class="about-h2">About<br><em>Till Five</em></h2>
-    <p class="about-p">We didn't just open a pizza spot — we built a late-night institution. Till Five Pizza was born from a simple belief: everyone deserves a killer meal no matter what hour. Crispy crust, bold toppings, saucy wings, loaded subs, and real-deal pastas — made from scratch, served with love, till the city goes quiet.</p>
-    <div class="about-stats">
-      <div>
-        <div class="stat-n">5</div>
-        <div class="stat-l">Menu Styles</div>
-      </div>
-      <div class="stat-sep"></div>
-      <div>
-        <div class="stat-n">Daily</div>
-        <div class="stat-l">Fresh Dough</div>
-      </div>
-      <div class="stat-sep"></div>
-      <div>
-        <div class="stat-n">Late</div>
-        <div class="stat-l">Night Hours</div>
-      </div>
-    </div>
-    <a href="#locations" class="btn-red">Find a Location</a>
-  </div>
-  <div class="reveal d2">
-    <div class="about-photo">
-      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&h=560&fit=crop&q=80" alt="Till Five Pizza Kitchen">
-    </div>
-  </div>
-</section>
-
-<!-- ══ MENU SECTION ══ -->
-<section class="menu-section" id="browse">
-  <div class="menu-head">
-    <p class="sec-label reveal">Our Favourites</p>
-    <h2 class="sec-h2 reveal d1">Browse our menu</h2>
-    <p class="sec-sub reveal d2" style="margin-bottom: 0;">Hand-tossed dough, crispy wings, smashed patties, and stuffed subs — made fresh and served right.</p>
-  </div>
-
-  <div class="pizza-grid">
-    <div class="p-card reveal">
-      <div class="p-card-img">
-        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=300&h=300&fit=crop&q=80" alt="Meat Feast Pizza">
-      </div>
-      <p class="p-card-name">Meat Feast</p>
-      <p class="p-card-desc">Pepperoni, Italian sausage, smoked ham, ground beef & crispy bacon</p>
-      <span class="price-badge">$16.99</span>
-    </div>
-    <div class="p-card reveal d1">
-      <div class="p-card-img">
-        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=300&h=300&fit=crop&q=80" alt="Honey Garlic Wings">
-      </div>
-      <p class="p-card-name">Honey Garlic Wings</p>
-      <p class="p-card-desc">Crispy bone-in wings tossed in house-made honey garlic glaze</p>
-      <span class="price-badge">$13.99</span>
-    </div>
-    <div class="p-card reveal d2">
-      <div class="p-card-img">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop&q=80" alt="TFP Smash Burger">
-      </div>
-      <p class="p-card-name">TFP Smash Burger</p>
-      <p class="p-card-desc">Double smashed patty, American cheese, pickles, TFP special sauce</p>
-      <span class="price-badge">$14.99</span>
-    </div>
-    <div class="p-card reveal">
-      <div class="p-card-img">
-        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=300&h=300&fit=crop&q=80" alt="Vodka Rigatoni">
-      </div>
-      <p class="p-card-name">Vodka Rigatoni</p>
-      <p class="p-card-desc">House-made rigatoni in pink vodka sauce, parmesan, fresh basil</p>
-      <span class="price-badge">$15.99</span>
-    </div>
-    <div class="p-card reveal d1">
-      <div class="p-card-img">
-        <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=300&h=300&fit=crop&q=80" alt="Italian Sub">
-      </div>
-      <p class="p-card-name">The Italian Sub</p>
-      <p class="p-card-desc">Capicola, salami, provolone, banana peppers, oil & vinegar on a toasted roll</p>
-      <span class="price-badge">$12.99</span>
-    </div>
-    <div class="p-card reveal d2">
-      <div class="p-card-img">
-        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&h=300&fit=crop&q=80" alt="Classic Margherita">
-      </div>
-      <p class="p-card-name">Classic Margherita</p>
-      <p class="p-card-desc">San Marzano tomato, fresh mozzarella, basil & extra virgin olive oil</p>
-      <span class="price-badge">$13.99</span>
-    </div>
-  </div>
-
-  <div class="menu-others">
-    <div class="mo-card reveal">
-      <span class="mo-icon">🔥</span>
-      <p class="mo-name">Buffalo Wings</p>
-      <p class="mo-sub">Saucy & crispy</p>
-    </div>
-    <div class="mo-card reveal d1">
-      <span class="mo-icon">🍝</span>
-      <p class="mo-name">Pasta Specials</p>
-      <p class="mo-sub">Made from scratch</p>
-    </div>
-    <div class="mo-card reveal d2">
-      <span class="mo-icon">🥤</span>
-      <p class="mo-name">Drinks</p>
-      <p class="mo-sub">Fresh & sparkling</p>
-    </div>
-    <div class="mo-card reveal d3">
-      <span class="mo-icon">🍮</span>
-      <p class="mo-name">Desserts</p>
-      <p class="mo-sub">Sweet endings</p>
-    </div>
-  </div>
-
-  <div class="menu-cta reveal">
-    <a href="menu.html" class="btn-red-outline">View Full Menu &amp; Order</a>
-  </div>
-</section>
-
-<!-- ══ CTA BANNER ══ -->
-<section class="cta-banner" id="catering">
-  <div class="reveal">
-    <p class="sec-label" style="color: rgba(255,255,255,0.65);">Open Late</p>
-    <h2 class="cta-h2">Taste the most<br>satisfying food<br><strong>any time of night</strong></h2>
-    <p class="cta-sub">Late-night craving? Early morning hunger? We've got you covered. Pizzas, wings, burgers, subs, and pastas — fresh, fast, and always worth it.</p>
-    <div style="display:flex; gap:14px; flex-wrap:wrap;">
-      <a href="#" class="btn-white">Order Online</a>
-      <a href="mailto:info@tillfivepizza.com" class="btn-ghost-white">Catering Inquiry</a>
-    </div>
-  </div>
-  <div class="reveal d2">
-    <div class="cta-photo">
-      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&h=560&fit=crop&q=80" alt="Till Five Pizza at Night">
-    </div>
-  </div>
-</section>
-
-<!-- ══ LOCATIONS ══ -->
-<section class="locations" id="locations">
-  <div class="locs-head">
-    <p class="sec-label reveal">Find Us</p>
-    <h2 class="sec-h2 reveal d1">Three Nashville Locations</h2>
-    <p class="sec-sub reveal d2" style="margin-bottom: 0;">Murfreesboro Pike · 7th Ave Downtown · Music Valley</p>
-  </div>
-
-  <div class="locs-grid">
-    <div class="loc-card reveal">
-      <span class="loc-num">Location 01</span>
-      <h3 class="loc-name">Murfreesboro Pike</h3>
-      <p class="loc-addr">825 Murfreesboro Pike<br>Nashville, TN 37217</p>
-      <p class="loc-phone"><a href="tel:6156063333">(615) 606-3333</a></p>
-      <div class="loc-hours">
-        <p class="loc-hours-label">Open Daily</p>
-        <p class="loc-hours-time">10 AM — 5 AM</p>
-        <span class="loc-open-badge"><span class="loc-open-dot"></span> Open Now</span>
-      </div>
-    </div>
-
-    <div class="loc-card reveal d1">
-      <span class="loc-num">Location 02</span>
-      <h3 class="loc-name">7th Ave — Downtown</h3>
-      <p class="loc-addr">231 7th Ave N<br>Nashville, TN 37219</p>
-      <p class="loc-phone"><a href="tel:6159560000">(615) 956-0000</a></p>
-      <div class="loc-hours">
-        <p class="loc-hours-label">Open Daily</p>
-        <p class="loc-hours-time">10 AM — 5 AM</p>
-        <span class="loc-open-badge"><span class="loc-open-dot"></span> Open Now</span>
-      </div>
-    </div>
-
-    <div class="loc-card reveal d2">
-      <span class="loc-num">Location 03</span>
-      <h3 class="loc-name">Music Valley</h3>
-      <p class="loc-addr">2450 Music Valley Dr<br>Nashville, TN 37214</p>
-      <p class="loc-phone"><a href="tel:6157273333">(615) 727-3333</a></p>
-      <div class="loc-hours">
-        <p class="loc-hours-label">Open Daily</p>
-        <p class="loc-hours-time">3 PM — 5 AM</p>
-        <span class="loc-open-badge"><span class="loc-open-dot"></span> Open Now</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<div class="footer">
-  <div>
-    <div class="f-logo">
-      <div class="f-logo-badge">
-        <img src="brand_assets/TFP Logo.png" alt="Till Five Pizza Logo">
-      </div>
-      <div class="f-logo-text">Till Five <span>Pizza</span></div>
-    </div>
-    <p class="f-desc">Your late-night go-to for handcrafted pizza, crispy wings, smashed burgers, loaded subs, and house-made pastas — open till 5 AM.</p>
-    <div class="f-socials">
-      <a href="#" target="_blank" class="f-soc">IG</a>
-      <a href="#" target="_blank" class="f-soc">FB</a>
-      <a href="#" target="_blank" class="f-soc">TT</a>
-    </div>
-  </div>
-  <div>
-    <p class="f-col-title">Menu</p>
-    <ul class="f-list">
-      <li><a href="#browse">Pizzas</a></li>
-      <li><a href="#browse">Wings</a></li>
-      <li><a href="#browse">Burgers</a></li>
-      <li><a href="#browse">Pastas</a></li>
-      <li><a href="#browse">Subs</a></li>
+    <ul class="nav-links" role="list" id="nav-menu">
+      <li><a href="#candidates">Candidates</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#media">Campus</a></li>
+      <li><a href="#involved">Get Involved</a></li>
     </ul>
-  </div>
-  <div>
-    <p class="f-col-title">Locations</p>
-    <ul class="f-list">
-      <li><a href="#locations">Downtown</a></li>
-      <li><a href="#locations">Midtown</a></li>
-      <li><a href="#locations">Uptown</a></li>
-    </ul>
-  </div>
-  <div>
-    <p class="f-col-title">More</p>
-    <ul class="f-list">
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#catering">Catering</a></li>
-      <li><a href="#">Order Online</a></li>
-      <li><a href="mailto:info@tillfivepizza.com">Contact</a></li>
-    </ul>
-  </div>
-</div>
-<div class="footer-bar">
-  <span>© 2025 Till Five Pizza. All rights reserved.</span>
-  <span>Open Late · Made Fresh · Every Night</span>
-</div>
 
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => io.observe(el));
-</script>
+    <div class="nav-right">
+      <a href="#involved" class="nav-vote-btn">Vote for Us</a>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
+  <!-- ═══════════════════════════════════
+       HERO
+  ═══════════════════════════════════ -->
+  <section id="hero" aria-label="Campaign hero">
+
+    <!-- Video background — muted, autoplay, no controls -->
+    <video class="hero-video-bg" autoplay muted loop playsinline aria-hidden="true">
+      <source src="brand_assets/Belmont%20University%20Tour.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Translucent white scrim for text readability -->
+    <div class="hero-video-scrim" aria-hidden="true"></div>
+
+    <!-- Honeycomb hive background pattern -->
+    <div class="hero-hive-bg" aria-hidden="true"></div>
+
+    <!-- Decorative golden orbs -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+    <!-- Main content -->
+    <div class="hero-content">
+
+      <p class="hero-eyebrow reveal">
+        Belmont University &nbsp;·&nbsp; SGA Presidential Campaign &nbsp;·&nbsp; 2025
+      </p>
+
+      <h1 class="hero-headline reveal rd1">
+        Make It<br/><em class="golden">Golden.</em>
+      </h1>
+
+      <p class="hero-sub reveal rd2">
+        Where every voice shines — Daugherty &amp; Honey for
+        Belmont SGA President &amp; Vice President.
+      </p>
+
+      <!-- Candidate portraits -->
+      <div class="hero-portraits reveal rd3" aria-label="Candidates">
+        <div class="portrait-unit">
+          <div class="portrait-ring">
+            <div class="portrait-placeholder portrait-a" role="img" aria-label="Placeholder for Abigail Daugherty photo">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(33,33,33,0.4)" stroke-width="1.2" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+            </div>
+          </div>
+          <p class="portrait-name">Abigail Daugherty</p>
+          <p class="portrait-role">For President</p>
+        </div>
+
+        <div class="portrait-divider" aria-hidden="true">&amp;</div>
+
+        <div class="portrait-unit">
+          <div class="portrait-ring">
+            <div class="portrait-placeholder portrait-b" role="img" aria-label="Placeholder for Dia Honey Abdullah photo">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(33,33,33,0.4)" stroke-width="1.2" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+            </div>
+          </div>
+          <p class="portrait-name">Dia Honey Abdullah</p>
+          <p class="portrait-role">For Vice President</p>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-cta reveal rd4">
+        <a href="#involved" class="btn-primary">Join the Hive 🍯</a>
+        <a href="#platform" class="btn-outline">Our Platform</a>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint reveal" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       MARQUEE TICKER
+  ═══════════════════════════════════ -->
+  <div class="ticker" aria-hidden="true" role="presentation">
+    <div class="ticker-track">
+      <span class="ticker-item">Make It Golden</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Daugherty &amp; Honey</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Belmont SGA 2025</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Your Voice Matters</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Sweet on Change</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Golden on Results</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Join the Hive</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Vote Daugherty &amp; Honey</span><span class="ticker-dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">Make It Golden</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Daugherty &amp; Honey</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Belmont SGA 2025</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Your Voice Matters</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Sweet on Change</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Golden on Results</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Join the Hive</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Vote Daugherty &amp; Honey</span><span class="ticker-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════ -->
+  <div class="stats-bar reveal" role="region" aria-label="Campaign stats">
+    <div class="stat-item">
+      <span>
+        <span class="stat-num" data-counter="7200">0</span><span class="stat-unit">+</span>
+      </span>
+      <span class="stat-label">Students Represented</span>
+    </div>
+    <div class="stat-divider" aria-hidden="true"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-counter="4">0</span>
+      <span class="stat-label">Bold Platform Pillars</span>
+    </div>
+    <div class="stat-divider" aria-hidden="true"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-counter="1">0</span>
+      <span class="stat-label">Golden Vision</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       MEET THE CANDIDATES
+  ═══════════════════════════════════ -->
+  <section id="candidates" aria-label="Meet the Candidates">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="eyebrow">Meet the Candidates</span>
+        <h2 class="sec-title">The People<br/>Behind the <em>Hive</em></h2>
+      </header>
+
+      <div class="cand-grid">
+
+        <!-- Candidate 1 -->
+        <article class="cand-card reveal rd1">
+          <div class="cand-photo-wrap">
+            <!--
+              SWAP IN: <img src="path/to/abigail.jpg" alt="Abigail Daugherty"
+                            style="width:100%;height:100%;object-fit:cover;" />
+            -->
+            <div class="cand-photo cand-photo-a" role="img" aria-label="Placeholder: Abigail Daugherty photo">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(33,33,33,0.35)" stroke-width="1" aria-hidden="true">
+                <circle cx="12" cy="8" r="5"/>
+                <path d="M3 21c0-5 4-9 9-9s9 4 9 9"/>
+              </svg>
+              <p class="photo-placeholder-text">[Photo of Abigail]</p>
+            </div>
+            <div class="cand-photo-accent" aria-hidden="true"></div>
+          </div>
+
+          <div class="cand-info">
+            <span class="cand-num" aria-hidden="true">01</span>
+            <h3 class="cand-name">Abigail<br/>Daugherty</h3>
+            <p class="cand-role">Candidate for SGA President</p>
+            <p class="cand-bio">
+              Abigail is a dedicated and passionate advocate for every student at Belmont University.
+              With deep roots in student leadership and a proven track record of building community,
+              she brings a clear-eyed vision for a more responsive and inclusive student government.
+              Her commitment: that no Belmont student ever feels unheard.
+            </p>
+            <p class="placeholder-note">[Replace with Abigail's actual biography]</p>
+          </div>
+        </article>
+
+        <!-- Candidate 2 -->
+        <article class="cand-card reveal rd2">
+          <div class="cand-photo-wrap">
+            <!--
+              SWAP IN: <img src="path/to/dia.jpg" alt="Dia Honey Abdullah"
+                            style="width:100%;height:100%;object-fit:cover;" />
+            -->
+            <div class="cand-photo cand-photo-b" role="img" aria-label="Placeholder: Dia Honey Abdullah photo">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(33,33,33,0.35)" stroke-width="1" aria-hidden="true">
+                <circle cx="12" cy="8" r="5"/>
+                <path d="M3 21c0-5 4-9 9-9s9 4 9 9"/>
+              </svg>
+              <p class="photo-placeholder-text">[Photo of Dia Honey]</p>
+            </div>
+            <div class="cand-photo-accent" aria-hidden="true"></div>
+          </div>
+
+          <div class="cand-info">
+            <span class="cand-num" aria-hidden="true">02</span>
+            <h3 class="cand-name">Dia Honey<br/>Abdullah</h3>
+            <p class="cand-role">Candidate for SGA Vice President</p>
+            <p class="cand-bio">
+              Dia Honey brings warmth, energy, and a community-first spirit to the Daugherty &amp; Honey
+              ticket. Known for her collaborative heart and unwavering commitment to student wellness
+              and belonging, she is the golden thread that weaves this campaign's vision together.
+              Dia believes in a Belmont where every student truly thrives.
+            </p>
+            <p class="placeholder-note">[Replace with Dia's actual biography]</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       CAMPAIGN PLATFORM
+  ═══════════════════════════════════ -->
+  <section id="platform" aria-label="Campaign Platform">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="eyebrow">Our Platform</span>
+        <h2 class="sec-title">Four Pillars for<br/>a <em>Golden</em> Belmont</h2>
+      </header>
+
+      <div class="platform-grid">
+
+        <div class="platform-card reveal rd1">
+          <span class="platform-icon" role="img" aria-label="Wellness icon">🌿</span>
+          <span class="platform-num" aria-hidden="true">01</span>
+          <h3 class="platform-title">Student Wellness &amp; Mental Health</h3>
+          <p class="platform-body">
+            Expanding access to mental health resources, peer support networks, and wellness
+            initiatives that meet students where they are — because a golden Belmont starts
+            with students who feel supported.
+          </p>
+        </div>
+
+        <div class="platform-card reveal rd2">
+          <span class="platform-icon" role="img" aria-label="Unity icon">🤝</span>
+          <span class="platform-num" aria-hidden="true">02</span>
+          <h3 class="platform-title">Campus Unity &amp; Inclusion</h3>
+          <p class="platform-body">
+            Bridging gaps between colleges, organizations, and student communities to build a
+            campus culture where everyone feels they belong — and where every voice carries
+            equal weight.
+          </p>
+        </div>
+
+        <div class="platform-card reveal rd3">
+          <span class="platform-icon" role="img" aria-label="Academic icon">📚</span>
+          <span class="platform-num" aria-hidden="true">03</span>
+          <h3 class="platform-title">Academic Resources &amp; Advocacy</h3>
+          <p class="platform-body">
+            Championing student input in academic policy — advocating for expanded tutoring,
+            extended library hours, and equitable access to the tools students need to succeed.
+          </p>
+        </div>
+
+        <div class="platform-card reveal rd4">
+          <span class="platform-icon" role="img" aria-label="Sustainability icon">🌍</span>
+          <span class="platform-num" aria-hidden="true">04</span>
+          <h3 class="platform-title">Sustainability &amp; Campus Life</h3>
+          <p class="platform-body">
+            Driving greener campus initiatives, revitalizing shared spaces, and creating vibrant
+            events that make Belmont a place every student is proud to call home.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       CAMPUS LIFE
+  ═══════════════════════════════════ -->
+  <section id="media" aria-label="Life at Belmont">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="eyebrow">Life at Belmont</span>
+        <h2 class="sec-title">Our Beautiful<br/><em>Campus</em></h2>
+      </header>
+
+      <div class="campus-mosaic" role="list" aria-label="Belmont University campus photos">
+
+        <div class="campus-tile tile-large reveal rd1" role="listitem">
+          <img
+            src="https://www.belmont.edu/_assets/img/home/webp/feature-outcomes.webp"
+            alt="Belmont University students achieving excellence"
+            loading="lazy"
+          />
+          <div class="tile-overlay">
+            <span class="tile-caption">Student Excellence</span>
+          </div>
+        </div>
+
+        <div class="campus-tile reveal rd2" role="listitem">
+          <img
+            src="https://www.belmont.edu/_assets/img/home/webp/feature-hub.webp"
+            alt="Belmont University student hub"
+            loading="lazy"
+          />
+          <div class="tile-overlay">
+            <span class="tile-caption">The Hub</span>
+          </div>
+        </div>
+
+        <div class="campus-tile reveal rd3" role="listitem">
+          <img
+            src="https://www.belmont.edu/_assets/img/home/webp/feature-wellness.webp"
+            alt="Belmont University wellness center"
+            loading="lazy"
+          />
+          <div class="tile-overlay">
+            <span class="tile-caption">Wellness</span>
+          </div>
+        </div>
+
+        <div class="campus-tile reveal rd2" role="listitem">
+          <img
+            src="https://www.belmont.edu/_assets/img/home/webp/connections-molly-grace.webp"
+            alt="Belmont University student"
+            loading="lazy"
+          />
+          <div class="tile-overlay">
+            <span class="tile-caption">Our Students</span>
+          </div>
+        </div>
+
+        <div class="campus-tile reveal rd3" role="listitem">
+          <img
+            src="https://www.belmont.edu/_assets/img/home/webp/connections-blair-miller.webp"
+            alt="Belmont University community"
+            loading="lazy"
+          />
+          <div class="tile-overlay">
+            <span class="tile-caption">Community</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       GET INVOLVED
+  ═══════════════════════════════════ -->
+  <section id="involved" aria-label="Get Involved">
+    <div class="container">
+      <div class="involved-wrap">
+
+        <div class="involved-text reveal">
+          <span class="eyebrow">Get Involved</span>
+          <h2 class="sec-title">Join<br/>the <em>Hive</em></h2>
+
+          <p class="involved-desc">
+            Ready to be part of something golden? Whether you want to volunteer, share our
+            message, or just stay updated — every bee makes the hive stronger.
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">📧</div>
+              <div>
+                <p class="contact-label">Email</p>
+                <p class="contact-value">[PLACEHOLDER: campaign@belmont.edu]</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">📱</div>
+              <div>
+                <p class="contact-label">Instagram</p>
+                <p class="contact-value">@daugherty.honey.belmont</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">🏫</div>
+              <div>
+                <p class="contact-label">Office Hours</p>
+                <p class="contact-value">[PLACEHOLDER: Time &amp; Location]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="involved-form-wrap reveal rd2">
+          <form class="cform" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label for="cf-name">Full Name</label>
+              <input id="cf-name" type="text" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" type="email" placeholder="you@belmont.edu" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="cf-how">I want to…</label>
+              <select id="cf-how">
+                <option value="">Select an option</option>
+                <option value="volunteer">Volunteer for the campaign</option>
+                <option value="spread">Spread the word on campus</option>
+                <option value="question">Ask a question</option>
+                <option value="hi">Just say hi 🍯</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-msg">Message (optional)</label>
+              <textarea id="cf-msg" rows="3" placeholder="Anything you'd like to share…"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Send It 🍯</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <p class="footer-brand-name">Daugherty<br/>&amp; Honey</p>
+          <p class="footer-brand-desc">
+            Making Belmont golden, one voice at a time. Abigail Daugherty &amp;
+            Dia Honey Abdullah for Belmont University SGA 2025.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" class="soc-btn" aria-label="Instagram">IG</a>
+            <a href="#" class="soc-btn" aria-label="Twitter / X">X</a>
+            <a href="#" class="soc-btn" aria-label="TikTok">TK</a>
+            <a href="#" class="soc-btn" aria-label="Email">@</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#candidates">Meet the Candidates</a></li>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#media">Campus Life</a></li>
+            <li><a href="#involved">Get Involved</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Belmont SGA</p>
+          <ul class="footer-links">
+            <li><a href="https://www.belmont.edu" target="_blank" rel="noopener">Belmont University</a></li>
+            <li><a href="#">SGA Official Page</a></li>
+            <li><a href="#">Election Information</a></li>
+            <li><a href="#">Student Resources</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Campaign</p>
+          <ul class="footer-links">
+            <li><a href="#">Campaign Press Kit</a></li>
+            <li><a href="#">Media Inquiries</a></li>
+            <li><a href="#">Volunteer Sign-Up</a></li>
+            <li><a href="#">Support Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Daugherty &amp; Honey Campaign &nbsp;·&nbsp; Belmont University SGA</p>
+        <p>Make It Golden ✦</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
 </body>
 </html>
