@@ -9,7 +9,7 @@
 // ── Config ────────────────────────────────────────────────
 // Paste your deployed Google Apps Script Web App URL here.
 // Deploy as: Execute as > Me, Who has access > Anyone
-const GOOGLE_SHEET_URL = 'PASTE_YOUR_WEB_APP_URL_HERE';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxT5KQsuLEFscY4drvf_FSMxHaOl3Ogs7p4q3f3NTKX9FoPhPY5LfzN19zTrWWy_E93og/exec';
 
 // ── Types ────────────────────────────────────────────────
 
