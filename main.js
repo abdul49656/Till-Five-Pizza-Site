@@ -1,6 +1,6 @@
 /**
  * main.js — Daugherty & Honey Campaign Site
- * Compiled from main.ts — Spring/Summer 2025
+ * Compiled from main.ts — Spring/Summer 2026
  */
 
 // ── Config ────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 /**
  * main.ts — Daugherty & Honey Campaign Site
- * TypeScript source — Spring/Summer 2025
+ * TypeScript source — Spring/Summer 2026
  *
  * Compiled to main.js for browser use.
  * Run `tsc` to recompile after changes.
